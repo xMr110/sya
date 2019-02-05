@@ -1,0 +1,58 @@
+@extends('layouts.app')
+
+
+@section('content')
+
+    <!-- subheader -->
+    <section id="Person-subheader"
+             @if(isset($settings->Person_subheader))
+             style="background: url({{'/storage/' .$settings->Person_subheader}}) fixed;"
+             @endif
+             class="subheader dark no-top no-bottom"  data-stellar-background-ratio=".2">
+        <div class="overlay-bg t70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>@lang('JoinusPerson.title')</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+    <!-- content begin -->
+    <div id="content" class="no-top no-bottom" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
+        <section aria-label="section-timeline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>@lang('JoinusPerson.title')</h1>
+                        <p class="lead"><span style="font-weight: 400;">@lang('JoinusPerson.header_text')</span></p>
+                        <ol>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.line1')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.line2')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.line3')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.line4')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.line5')</span></li>
+                        </ol>
+                        <p class="lead"><span style="font-weight: 400;">@lang('JoinusPerson.header_text2')</span></p>
+                        <ol>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text1')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text2')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text3')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text4')</span></li>
+                            <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text5')</span></li>
+                        </ol>
+                        <p class="lead">@lang('JoinusPerson.lorem')<a href="mailto:info@syrian-youth.org"  style="font-weight: 600;">info<wbr />@syrian-youth<wbr />.org</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- content close -->
+
+
+
+@endsection

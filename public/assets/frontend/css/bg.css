@@ -1,0 +1,62 @@
+/*
+
+
+
+/* background settings for Home Page */
+/*Main BackGround*/
+/*#section-hero-2 {background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(../images/background/BG-110.jpg) top;}*/
+/*Join Us*/
+/*#section-process {background:url(../images/background/BG_3.jpg) fixed;}*/
+/*Our Team*/
+/*#section-team {background:url(../images/background/BG_2.jpg) fixed;}*/
+/*Contact Us*/
+
+
+/*!* Bacgkground settings for SubPages *!*/
+/*!* Our Blog *!*/
+/*!* Guest Blog *!*/
+/*!* About us *!*/
+/*#AboutUs-subheader {background: url(../images/misc/2.jpg) fixed;}*/
+/*!* what we do *!*/
+/*#what-subheader {background: url(../images/misc/2.jpg) fixed;}*/
+/*!* Apply now *!*/
+/*#apply-subheader {background: url(../images/background/8.jpg) fixed;}*/
+/*!* write with us *!*/
+/*#write-subheader {background: url(../images/misc/2.jpg) fixed;}*/
+/*!* Join us Company *!*/
+/*#Company-subheader {background: url( ../images/misc/2.jpg) fixed;}*/
+/*!* Join us Person *!*/
+/*#Person-subheader {background: url( ../images/misc/2.jpg) fixed;}*/
+
+
+
+
+
+/* media query */
+@media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait){
+	section{
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-o-background-size: auto 100%;
+	background-size: auto 100%;
+	background-attachment:scroll;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.subheader{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment:scroll;
+	}
+}
+@media only screen and (max-width: 992px) {
+	section{
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-o-background-size: auto 100%;
+	background-size: auto 100%;
+	background-attachment:scroll;
+	}
+}
