@@ -32,8 +32,8 @@
                     <div class="ui link cards" >
                     @foreach($initiatives as $initiative)
                           <div class="Pass-id card" style="margin-right: auto;margin-left: auto" data-id="{{$initiative}}"  data-toggle="modal" data-target="#MyModal">
-                                    <div class="image" style="width: 200px; height: 200px; background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
-                                        <img src="{{url('/storage/'.$initiative->image_path)}}">
+                                    <div  class="image" style="width: 100%;  background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
+                                        <img style="max-width: 100%; max-height: 100%" src="{{url('/storage/'.$initiative->image_path)}}">
                                     </div>
                                     <div class="content utest">
                                         <div class="header">{{$initiative->name}}</div>

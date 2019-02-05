@@ -42,7 +42,7 @@
 
                             <div class="post-text">
                                 <h3>{{$program->name}}</h3>
-                                <p>{!! $program->description !!}.</p>
+                                <p style="word-break: break-all">{!! $program->description !!}.</p>
                             </div>
                         </div>
                     </div>

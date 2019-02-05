@@ -32,8 +32,8 @@
                     <div class="ui link cards" >
                     @foreach($programs as $program)
                           <div  class="card" style="margin-right: auto;margin-left: auto">
-                              <a href="{{action('HomeController@program',$program)}}"><div class="image" style="width: 200px; height: 200px; background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
-                                        <img src="{{url('/storage/'.$program->image_path)}}">
+                              <a href="{{action('HomeController@program',$program)}}"><div class="image" style="width: 100%; background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
+                                        <img style="max-width: 100%; max-height: 100%" src="{{url('/storage/'.$program->image_path)}}">
                                     </div></a>
                                     <div class="content utest">
                                         <div class="header">{{$program->name}}</div>

@@ -68,8 +68,8 @@
                                     <div class="ui link cards"  style="margin: 10px;">
                                         @foreach($programs as $program)
                                             <div class="card"  style="margin-right: auto;margin-left: auto">
-                                                <a href="{{action('HomeController@program',$program)}}">  <div class="image" style="width: 200px; height: 200px; background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
-                                                    <img src="{{url('/storage/'.$program->image_path)}}">
+                                                <a href="{{action('HomeController@program',$program)}}">  <div class="image" style="width: 100%;  background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
+                                                    <img style="max-width: 100%;max-height: 100%;" src="{{url('/storage/'.$program->image_path)}}">
                                                 </div>
                                                 </a>
                                                 <div class="content utest" style="text-align: center;">
@@ -88,45 +88,6 @@
 
 
                  </div>
-            </div>
-        </section>
-        <!-- section close -->
-
-
-
-        <!-- section begin -->
-        <section id="section-fun-facts" class=" de_light pt40 pb40 ">
-            <div class="container">
-
-                <div class="row sequence">
-                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
-                        <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics1}}" data-speed="2500">0</h3>
-                            <span>@lang('homepage.numriecTitle1')</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
-                        <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics2}}">0</h3>
-                            <span>@lang('homepage.numriecTitle2')</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow" data-wow-delay=".5s">
-                        <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics3}}">0</h3>
-                            <span>@lang('homepage.numriecTitle3')</span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
-                        <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics4}}" data-speed="2500">0</h3>
-                            <span>@lang('homepage.numriecTitle4')</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- section close -->
@@ -217,6 +178,7 @@
 
 
 
+
         <!-- section begin 2 -->
         <section id="section-process"  class="text-red no-top no-bottom" data-bgcolor="#333"
                  @if(isset($settings->initiative_Background))  style="background:url({{'/storage/' . $settings->initiative_Background}}) fixed;"
@@ -235,8 +197,8 @@
                                 <div class="ui link cards">
                                     @foreach($initiatives as $initiative)
                                         <div  class="Pass-id card" data-id="{{$initiative}}"  data-toggle="modal" data-target="#MyModal" style="margin-right: auto;margin-left: auto">
-                                            <div class="image" style="width: 200px; height: 200px; background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
-                                                <img src="{{url('/storage/'.$initiative->image_path)}}">
+                                            <div class="image" style="width: 100%;  background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
+                                                <img style="max-width: 100%; max-height: 100%" src="{{url('/storage/'.$initiative->image_path)}}">
                                             </div>
                                             <div class="content utest" style="text-align: center;">
                                                 <div class="header">{{$initiative->name}}</div>
@@ -306,6 +268,42 @@
             </div>
         </div>
 
+        <!-- section begin -->
+        <section id="section-fun-facts" class=" de_light pt40 pb40 ">
+            <div class="container">
+
+                <div class="row sequence">
+                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="{{$settings->statics1}}" data-speed="2500">0</h3>
+                            <span>@lang('homepage.numriecTitle1')</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="{{$settings->statics2}}">0</h3>
+                            <span>@lang('homepage.numriecTitle2')</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow" data-wow-delay=".5s">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="{{$settings->statics3}}">0</h3>
+                            <span>@lang('homepage.numriecTitle3')</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
+                        <div class="de_count">
+                            <h3 class="timer" data-to="{{$settings->statics4}}" data-speed="2500">0</h3>
+                            <span>@lang('homepage.numriecTitle4')</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
 
         <!-- section begin -->
         <section id="section-team" class="text-red no-top no-bottom" data-bgcolor="#000"
@@ -319,7 +317,7 @@
                         <div class="col-md-12 text-center">
                             <h2 dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}"><span class="uptitle" style="color: #ff4836">@lang('homepage.OurTeam_title')</span>@lang('homepage.OurTeam_subtitle')</h2>
                         </div>
-                        <div class="carousel slide media-carousel" id="media">
+                        <div class="media-carousel carousel slide media-carousel" id="media">
 
                             <div class="carousel-inner">
                                 @foreach($memmbers as $key => $memmber)
@@ -330,7 +328,6 @@
                                                 <div class="col-md-3 col-sm-6 ">
                                                     <div class="our-team">
                                                         <div class="pic">
-                                                            {{--<img src="/assets/frontend/images/team/1.jpg">--}}
                                                             <img src="{{url('/storage/'.$memmber->image_path)}}">
                                                             <ul class="social">
                                                                 <li>
@@ -382,8 +379,8 @@
                                                             </ul>
                                                         </div>
                                                         <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                            <h3 class="title">Williamson</h3>
-                                                            <span class="post">Web Developer</span>
+                                                            <h3 class="title">{{$memmber->name}}</h3>
+                                                            <span class="post">{{$memmber->job_title}}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -396,8 +393,7 @@
                             </div>
 
                             <a data-slide="prev" href="#media" style="margin-top: 250px;" class="left carousel-control">‹</a>
-                            <a data-slide="next" href="#media" style="margin-top: 250px;"
-                               class="right carousel-control">›</a>
+                            <a data-slide="next" href="#media" style="margin-top: 250px;" class="right carousel-control">›</a>
 
                             <ol class="carousel-indicators">
                                 @foreach($memmbers as $key => $memmber)
