@@ -28,13 +28,13 @@ class SettingsController extends Controller
         if ($request->hasFile('logo')) {
             $input['logo'] = $request->file('logo')->store('basics', 'public');
 
-            @unlink(public_path('app/public/'. $settings->logo));
+            @unlink(storage_path('app/public/'. $settings->logo));
         }
 
         if ($request->hasFile('banner')) {
             $input['banner'] = $request->file('banner')->store('basics', 'public');
 
-            @unlink(public_path('app/public/'. $settings->logo));
+            @unlink(storage_path('app/public/'. $settings->logo));
         }
 
         if ($request->hasFile('favicon')) {

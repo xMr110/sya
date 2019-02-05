@@ -347,12 +347,15 @@
                             <div class="col-md-12">
                                 <div class="ui link cards">
                                     @foreach($initiatives as $initiative)
-                                        <div class="Pass-id card" data-id="{{$initiative}}"  data-toggle="modal" data-target="#MyModal" style="margin-right: auto;margin-left: auto">
+                                        <div  class="Pass-id card" data-id="{{$initiative}}"  data-toggle="modal" data-target="#MyModal" style="margin-right: auto;margin-left: auto">
                                             <div class="image" style="width: 200px; height: 200px; background-color: white; margin: auto; margin-top: 10%;margin-bottom: 10% ">
                                                 <img src="{{url('/storage/'.$initiative->image_path)}}">
                                             </div>
                                             <div class="content utest" style="text-align: center;">
                                                 <div class="header">{{$initiative->name}}</div>
+                                                <div class="meta">
+                                                    <p>Phone : {{$initiative->phone}}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     @endforeach
@@ -371,7 +374,6 @@
         </section>
         <!-- section close -->
 
-
         <div id="MyModal"  class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -384,7 +386,12 @@
                         <div  class=" col-md-6">
                             <h5 id="site"></h5>
                             <h5 id="facebook"></h5>
+                            <h5 id="phone"></h5>
                             <p id="description"></p>
+
+
+                        </div>
+                        <div class="row" style="padding: 20px;">
                             <div style="display: none" id="mapinfo"></div>
                             <div style="padding: 10px;" class="mapouter" id="mapouter">
 
@@ -394,19 +401,19 @@
                                 <style>
                                     .mapouter {
                                         text-align: right;
-                                        height: 500px;
-                                        width: 135%;
+                                        height: 100%;
+                                        width: 100%;
                                     }
                                     .map {
                                         overflow: hidden;
                                         background: none !important;
-                                        height: 500px;
-                                        width: 135%;
+                                        height: 100%px;
+                                        width: 100%;
                                     }
                                 </style>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -422,56 +429,6 @@
 
 
 @section('script')
-    <script>
-        $('.Pass-id').click(function () {
-            document.getElementById("title").innerText =$(this).data('id').name;
-            document.getElementById("description").innerText =$(this).data('id').description;
-            document.getElementById("site").innerText ="SITE: "+$(this).data('id').site;
-            document.getElementById("facebook").innerText ="FB Page: "+$(this).data('id').facebook;
-            $.ajax({
-                url: '/initiative/{id}/image',
-                type: 'GET',
-                data: $(this).data('id'),
-                success: function(response)
-                {
-                    $('#image').html(response);
-                }
-            });
-            $.ajax({
-                url: '/initiative/{id}/map',
-                type: 'GET',
-                data: $(this).data('id'),
-                success: function(response)
-                {
-                    $('#mapinfo').html(response);
-                    initMap();
-
-                }
-            });
-
-        });
-
-        var map;
-        function initMap() {
-            var latitude =parseFloat($("input[name='lat']").val()); // YOUR LATITUDE VALUE
-            var longitude =parseFloat($("input[name='long']").val()); // YOUR LONGITUDE VALUE
-            var myLatLng = {lat: latitude, lng: longitude};
-
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: myLatLng,
-                zoom: 10
-            });
-            var marker = new google.maps.Marker({position: myLatLng, map: map});
-        }
-    </script>
-
-    <script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2YTXGETKmbutCt94wZaiZcGp_Jif_C0&callback=initMap&libraries=places"></script>
-
-
-
-
-
-
 
 
     <script>
@@ -510,7 +467,59 @@
         });
 
     </script>
-    @endsection
+
+
+
+
+    <script>
+        $('.Pass-id').click(function () {
+            document.getElementById("title").innerText =$(this).data('id').name;
+            document.getElementById("description").innerText =$(this).data('id').description;
+            document.getElementById("site").innerText ="SITE: "+$(this).data('id').site;
+            document.getElementById("facebook").innerText ="FB Page: "+$(this).data('id').facebook;
+            document.getElementById("phone").innerText ="Phone: "+$(this).data('id').phone;
+            $.ajax({
+                url: '/initiative/{id}/image',
+                type: 'GET',
+                data: $(this).data('id'),
+                success: function(response)
+                {
+                    $('#image').html(response);
+                }
+            });
+            $.ajax({
+                url: '/initiative/{id}/map',
+                type: 'GET',
+                data: $(this).data('id'),
+                success: function(response)
+                {
+                    $('#mapinfo').html(response);
+                    initMap();
+
+                }
+            });
+
+        });
+
+        var map;
+        function initMap() {
+            var latitude =parseFloat($("input[name='lat']").val()); // YOUR LATITUDE VALUE
+            var longitude =parseFloat($("input[name='long']").val()); // YOUR LONGITUDE VALUE
+            // var myLatLng = {lat: latitude, lng: longitude};
+            var myLatLng = new google.maps.LatLng(latitude, longitude);
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 10
+            });
+
+            var marker = new google.maps.Marker({position: myLatLng, map: map});
+        }
+    </script>
+    <script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2YTXGETKmbutCt94wZaiZcGp_Jif_C0"></script>
+
+
+@endsection
 
 
 
