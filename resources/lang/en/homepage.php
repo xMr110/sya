@@ -26,6 +26,6 @@ return array (
   'numriecTitle2' => 'Your Title',
   'numriecTitle3' => 'Your Title',
   'numriecTitle4' => 'Your Title',
-  'Background_subtitle' => 'Your Title',
+  'initiative_subtitle' => 'Your Title',
   'contact_blockquote' => 'We believe we are capable to build the future',
 );
