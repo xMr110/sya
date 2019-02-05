@@ -93,119 +93,6 @@
         <!-- section close -->
 
 
-        <!-- section begin -->
-        <section id="section-team" class="text-red no-top no-bottom" data-bgcolor="#000"
-               @if(isset($settings->Ourteam_Background))  style="background:url({{'/storage/' . $settings->Ourteam_Background}}) fixed;" @endif
-                 data-stellar-background-ratio=".1" >
-
-            <div class="overlay-bg t30">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <h2 dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}"><span class="uptitle" style="color: #ff4836">@lang('homepage.OurTeam_title')</span>@lang('homepage.OurTeam_subtitle')</h2>
-                        </div>
-                        <div class="carousel slide media-carousel" id="media">
-
-                            <div class="carousel-inner">
-                                @foreach($memmbers as $key => $memmber)
-                                    @if($key < 4)
-                                        @if($key ==0)
-                                            <div class="item active">
-                                                @endif
-                                                <div class="col-md-3 col-sm-6 ">
-                                                    <div class="our-team">
-                                                        <div class="pic">
-                                                            {{--<img src="/assets/frontend/images/team/1.jpg">--}}
-                                                            <img src="{{url('/storage/'.$memmber->image_path)}}">
-                                                            <ul class="social">
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
-                                                                       class="fa fa-facebook"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['google']}}"
-                                                                       class="fa fa-google-plus"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
-                                                                       class="fa fa-instagram"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
-                                                                       class="fa fa-linkedin"></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                            <h3 class="title">{{$memmber->name}}</h3>
-                                                            <span class="post">{{$memmber->job_title}}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                @if($key == 3)
-                                            </div>
-                                        @endif
-                                    @endif
-
-                                    @if($key > 3 and $key % 4 == 0)
-                                        <div class="item text-center">
-                                            @endif
-                                            @if($key > 3)
-                                                <div class="col-md-3 col-sm-6 ">
-                                                    <div class="our-team">
-                                                        <div class="pic">
-                                                            <img src="{{url('/storage/'.$memmber->image_path)}}">
-                                                            <ul class="social">
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
-                                                                       class="fa fa-facebook"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['google']}}"
-                                                                       class="fa fa-google-plus"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
-                                                                       class="fa fa-instagram"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
-                                                                       class="fa fa-linkedin"></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                            <h3 class="title">Williamson</h3>
-                                                            <span class="post">Web Developer</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                            @if(($key > 3 and $key % 4 == 3) or $key == count($memmbers) - 1)
-                                        </div>
-                                    @endif
-                                @endforeach
-
-                            </div>
-
-                            <a data-slide="prev" href="#media" style="margin-top: 250px;" class="left carousel-control">‹</a>
-                            <a data-slide="next" href="#media" style="margin-top: 250px;"
-                               class="right carousel-control">›</a>
-
-                            <ol class="carousel-indicators">
-                                @foreach($memmbers as $key => $memmber)
-                                    @if($key % 4 == 0)
-                                        <li data-target="#media" data-slide-to="{{ $key }}"
-                                            class="{{ !$key ? 'active' : '' }}"></li>
-                                    @endif
-                                @endforeach
-                            </ol>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-        <!-- section close -->
-
 
         <!-- section begin -->
         <section id="section-fun-facts" class=" de_light pt40 pb40 ">
@@ -419,6 +306,119 @@
             </div>
         </div>
 
+
+        <!-- section begin -->
+        <section id="section-team" class="text-red no-top no-bottom" data-bgcolor="#000"
+                 @if(isset($settings->Ourteam_Background))  style="background:url({{'/storage/' . $settings->Ourteam_Background}}) fixed;" @endif
+                 data-stellar-background-ratio=".1" >
+
+            <div class="overlay-bg t30">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}"><span class="uptitle" style="color: #ff4836">@lang('homepage.OurTeam_title')</span>@lang('homepage.OurTeam_subtitle')</h2>
+                        </div>
+                        <div class="carousel slide media-carousel" id="media">
+
+                            <div class="carousel-inner">
+                                @foreach($memmbers as $key => $memmber)
+                                    @if($key < 4)
+                                        @if($key ==0)
+                                            <div class="item active">
+                                                @endif
+                                                <div class="col-md-3 col-sm-6 ">
+                                                    <div class="our-team">
+                                                        <div class="pic">
+                                                            {{--<img src="/assets/frontend/images/team/1.jpg">--}}
+                                                            <img src="{{url('/storage/'.$memmber->image_path)}}">
+                                                            <ul class="social">
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
+                                                                       class="fa fa-facebook"></a></li>
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['google']}}"
+                                                                       class="fa fa-google-plus"></a></li>
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
+                                                                       class="fa fa-instagram"></a></li>
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
+                                                                       class="fa fa-linkedin"></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
+                                                            <h3 class="title">{{$memmber->name}}</h3>
+                                                            <span class="post">{{$memmber->job_title}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @if($key == 3)
+                                            </div>
+                                        @endif
+                                    @endif
+
+                                    @if($key > 3 and $key % 4 == 0)
+                                        <div class="item text-center">
+                                            @endif
+                                            @if($key > 3)
+                                                <div class="col-md-3 col-sm-6 ">
+                                                    <div class="our-team">
+                                                        <div class="pic">
+                                                            <img src="{{url('/storage/'.$memmber->image_path)}}">
+                                                            <ul class="social">
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
+                                                                       class="fa fa-facebook"></a></li>
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['google']}}"
+                                                                       class="fa fa-google-plus"></a></li>
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
+                                                                       class="fa fa-instagram"></a></li>
+                                                                <li>
+                                                                    <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
+                                                                       class="fa fa-linkedin"></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
+                                                            <h3 class="title">Williamson</h3>
+                                                            <span class="post">Web Developer</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                            @if(($key > 3 and $key % 4 == 3) or $key == count($memmbers) - 1)
+                                        </div>
+                                    @endif
+                                @endforeach
+
+                            </div>
+
+                            <a data-slide="prev" href="#media" style="margin-top: 250px;" class="left carousel-control">‹</a>
+                            <a data-slide="next" href="#media" style="margin-top: 250px;"
+                               class="right carousel-control">›</a>
+
+                            <ol class="carousel-indicators">
+                                @foreach($memmbers as $key => $memmber)
+                                    @if($key % 4 == 0)
+                                        <li data-target="#media" data-slide-to="{{ $key }}"
+                                            class="{{ !$key ? 'active' : '' }}"></li>
+                                    @endif
+                                @endforeach
+                            </ol>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- section close -->
 
 
     </div>

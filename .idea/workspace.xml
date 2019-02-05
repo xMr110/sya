@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9d61bcf-c129-4d22-a255-52f39d5dcb4e" name="Default" comment="updated V5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/homepage.php" afterDir="false" />
-    </list>
+    <list default="true" id="d9d61bcf-c129-4d22-a255-52f39d5dcb4e" name="Default" comment="updated V5.1" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/navbar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="207">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -70,7 +67,16 @@
         <entry file="file://$PROJECT_DIR$/resources/lang/en/homepage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/lang/ar/homepage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="28" column="24" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -321,6 +327,13 @@
               <item name="sya" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="ar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sya" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
               <item name="en" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -456,7 +469,7 @@
       <workItem from="1549207750542" duration="8779000" />
       <workItem from="1549375270049" duration="3536000" />
       <workItem from="1549383990590" duration="5712000" />
-      <workItem from="1549398932779" duration="815000" />
+      <workItem from="1549398932779" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="ddd">
       <created>1548882187867</created>
@@ -514,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549389903710</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated V5.1">
+      <created>1549401265521</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1549401265521</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384877000" />
+    <option name="totallyTimeSpent" value="385063000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -569,7 +589,8 @@
     <MESSAGE value="fix 1" />
     <MESSAGE value="updated V4" />
     <MESSAGE value="updated V5" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated V5" />
+    <MESSAGE value="updated V5.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated V5.1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php">
@@ -755,13 +776,6 @@
     <entry file="file://$PROJECT_DIR$/resources/lang/en/aboutus.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/ar/homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/Background/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-538">
@@ -900,17 +914,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/homepage.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        <state relative-caret-position="207">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/navbar.php">
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="374">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/ar/homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="24" />
         </state>
       </provider>
     </entry>
