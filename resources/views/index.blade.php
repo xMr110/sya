@@ -392,8 +392,7 @@
 
                             </div>
 
-                            <a data-slide="prev" href="#media" style="margin-top: 250px;" class="left carousel-control">‹</a>
-                            <a data-slide="next" href="#media" style="margin-top: 250px;" class="right carousel-control">›</a>
+
 
                             <ol class="carousel-indicators">
                                 @foreach($memmbers as $key => $memmber)
@@ -406,7 +405,8 @@
 
 
                         </div>
-
+                        <a data-slide="prev" href="#media" style="margin-top: 250px;" class="left carousel-control">‹</a>
+                        <a data-slide="next" href="#media" style="margin-top: 250px;" class="right carousel-control">›</a>
 
                     </div>
 
