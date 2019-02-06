@@ -34,6 +34,14 @@
                     <p class="card-text">{{$Project_Activit->Date }}</p>
                     <p class="card-text">{{$Project_Activit->type }}</p>
                     <a href="{{action('Admin\WhatwedoController@edit',$Project_Activit)}}" class="btn btn-primary">تعديل</a>
+                    {{--<a href="{{action('Admin\WhatwedoController@destroy',$Project_Activit)}}" class="btn btn-danger">حذف</a>--}}
+                    <div style="display: inline-block"><a class="btn btn btn-outline"  data-delete href="javascript:void(0);"><i class="btn btn-danger">حذف</i></a>
+                    <form action="{{ action('Admin\WhatwedoController@destroy', $Project_Activit) }}"
+                          method="post" id="delete">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+
+                    </form></div>
                 </div>
             </div>
             <!-- Card -->

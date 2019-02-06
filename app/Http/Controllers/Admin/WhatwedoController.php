@@ -77,4 +77,19 @@ class WhatwedoController extends Controller
 
 
     }
+    public function destroy($id)
+    {
+        $deleted = Whatwedo::findOrFail($id);
+
+        if (file_exists($deleted->image_path))
+        {
+            unlink(storage_path('/storage/'.$deleted->image_path));
+        }
+        $deleted->delete();
+
+        return redirect(action('Admin\WhatwedoController@index'))->with('success','تم  الحذف بنجاح!');
+
+
+
+    }
 }

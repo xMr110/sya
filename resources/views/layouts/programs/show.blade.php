@@ -40,9 +40,9 @@
                                 <img  src="{{ url('/storage/' .$program->image_path) }}" class="img-responsive" alt="">
                             </div>
 
-                            <div class="post-text">
+                            <div class="post-text" style="word-break: break-word;">
                                 <h3>{{$program->name}}</h3>
-                                <p style="word-break: break-all">{!! $program->description !!}.</p>
+                             {!! $program->description !!}.
                             </div>
                         </div>
                     </div>
