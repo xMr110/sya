@@ -969,7 +969,7 @@ header.header-mobile #logo{
 	margin-top:2px;
 }
 header.header-mobile .logo {
-	display: none;
+	display: inline-block;
 }
 header.header-mobile .btn-rsvp {
 	padding-top: 40px;
@@ -8355,7 +8355,7 @@ a, img {
 		font-size: 24px;
 	}
 	header div#logo img {
-		max-width: 200px;
+		max-width: 90px;
 		height: auto;
 	}
 	.pf_full_width.gallery_border .item {
