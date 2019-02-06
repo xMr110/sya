@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9d61bcf-c129-4d22-a255-52f39d5dcb4e" name="Default" comment="added delete button to what we do pages &#10;&#10;added translation keys and edited whatwedo contoller &#10;&#10;By Danial" />
+    <list default="true" id="d9d61bcf-c129-4d22-a255-52f39d5dcb4e" name="Default" comment="new fix for arrow nav on our team section">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +33,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="387" column="108" lean-forward="true" selection-start-line="387" selection-start-column="77" selection-end-line="387" selection-end-column="108" />
+            <state relative-caret-position="163">
+              <caret line="190" column="67" selection-start-line="190" selection-start-column="67" selection-end-line="190" selection-end-column="67" />
               <folding>
                 <element signature="e#16987#19310#0#HTML" />
                 <element signature="e#0#26027#0#Blade" />
                 <element signature="e#0#26027#0#Blade" />
+                <element signature="e#23022#23048#0#HTML" expanded="true" />
+                <element signature="e#23148#23174#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +81,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
               <caret line="79" column="27" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/lang/en/homepage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="28" column="22" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -174,12 +188,12 @@
         <option value="$PROJECT_DIR$/resources/lang/ar/homepage.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/programs/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/initiative/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/programs/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/WhatwedoController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/whatwedos/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/partners/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
       </list>
     </option>
   </component>
@@ -321,6 +335,19 @@
               <item name="sya" type="b2602c69:ProjectViewProjectNode" />
               <item name="sya" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sya" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sya" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="en" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sya" type="b2602c69:ProjectViewProjectNode" />
@@ -499,7 +526,7 @@
       <workItem from="1549375270049" duration="3536000" />
       <workItem from="1549383990590" duration="5712000" />
       <workItem from="1549398932779" duration="5043000" />
-      <workItem from="1549477306525" duration="1717000" />
+      <workItem from="1549477306525" duration="2632000" />
     </task>
     <task id="LOCAL-00001" summary="ddd">
       <created>1548882187867</created>
@@ -592,11 +619,25 @@
       <option name="project" value="LOCAL" />
       <updated>1549478869367</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix our team nav arrow ...">
+      <created>1549479086687</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1549479086687</updated>
+    </task>
+    <task id="LOCAL-00015" summary="new fix for arrow nav on our team section">
+      <created>1549479292432</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549479292432</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390822000" />
+    <option name="totallyTimeSpent" value="391737000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,7 +690,9 @@
     <MESSAGE value="updated V5" />
     <MESSAGE value="updated V5.1" />
     <MESSAGE value="added delete button to what we do pages &#10;&#10;added translation keys and edited whatwedo contoller &#10;&#10;By Danial" />
-    <option name="LAST_COMMIT_MESSAGE" value="added delete button to what we do pages &#10;&#10;added translation keys and edited whatwedo contoller &#10;&#10;By Danial" />
+    <MESSAGE value="fix our team nav arrow ..." />
+    <MESSAGE value="new fix for arrow nav on our team section" />
+    <option name="LAST_COMMIT_MESSAGE" value="new fix for arrow nav on our team section" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WhatwedoController.php">
@@ -890,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/ar/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
@@ -980,14 +1016,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="387" column="108" lean-forward="true" selection-start-line="387" selection-start-column="77" selection-end-line="387" selection-end-column="108" />
+        <state relative-caret-position="163">
+          <caret line="190" column="67" selection-start-line="190" selection-start-column="67" selection-end-line="190" selection-end-column="67" />
           <folding>
             <element signature="e#16987#19310#0#HTML" />
             <element signature="e#0#26027#0#Blade" />
             <element signature="e#0#26027#0#Blade" />
+            <element signature="e#23022#23048#0#HTML" expanded="true" />
+            <element signature="e#23148#23174#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

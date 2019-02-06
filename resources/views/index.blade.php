@@ -188,7 +188,7 @@
                 <div class="container"  style="width: 100%!important;">
                     <div class="row">
                         <div class="text-light col-md-12 text-center" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                            <h2>@lang('homepage.Background_subtitle')</h2>
+                            <h2>@lang('homepage.initiative_subtitle')</h2>
                         </div>
                     </div>
                     <div class="row" style="text-align: center;">
