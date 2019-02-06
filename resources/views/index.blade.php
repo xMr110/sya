@@ -385,7 +385,7 @@
                                                     </div>
                                                 </div>
                                             @endif
-                                            @if(($key > 3 and $key % 4 == 3) or $key == count($memmbers) - 1)
+                                            @if(($key > 3 and $key % 4 == 3) )
                                         </div>
                                     @endif
                                 @endforeach
