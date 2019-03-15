@@ -1,10 +1,14 @@
 <?php
-return array (
-    'about_title'=>'About us',
-    'about_lorem'=>'The Syrian Youth Assembly was set up by a group of Syrian youth who were present at the World Humanitarian Summit in 2016. We are a platform for young Syrians to work together to build peace. This initiative is fully youth-led and we want to engage as many Syrian youth (18-29 years old) around the world.',
-    'sya_title'=>'SYA',
-    'Join_us'=>'Join Us',
-    'help_title'=>'Help & Support',
-    'help_link'=>'Contact Us',
 
+return array (
+  'about_title' => 'من نحن',
+  'about_lorem' => 'تم إنشاء جمعية الشباب السوري من قبل مجموعة من الشباب السوري الذين حضروا القمة الإنسانية العالمية في عام 2016. نحن منبر للشباب السوريين للعمل معًا لبناء السلام. هذه المبادرة يقودها الشباب بالكامل ونريد إشراك أكبر عدد من الشباب السوري (18-29 عامًا) في جميع أنحاء العالم.',
+  'sya_title' => 'SYA',
+  'Join_us' => 'انصم إلينا',
+  'help_title' => 'المساعدة والدعم',
+  'help_link' => 'تواصل معنا',
+  'footer_center' => '© جميع الحقوق محفوظة 2018 - DirectGroup',
+  'about_us' => 'من نحن',
+  'apply' => 'تقدّم الآن',
+  'blog' => 'المدوّنة',
 );
