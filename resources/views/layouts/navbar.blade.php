@@ -5,7 +5,7 @@
             @if(isset($settings->logo))
             <div id="logo">
                 <a href="/">
-                    <img id="Logo" class="logo" src="{{ url('/storage/' . $settings->logo) }}" alt="">
+                    <img id="Logo" class="logo" style="width: 180px;" src="{{ url('/storage/' . $settings->logo) }}" alt="">
                     {{--<img class="logo-2" src="/assets/frontend/images/logo-dark.png" alt="">--}}
                 </a>
             </div>
@@ -34,6 +34,7 @@
 
                         if (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
 
+                            Logo.style.width = '120px';
                             Logo.setAttribute('src', '{{url('/storage/' . $settings->logo)}}');
                             mew1.setAttribute('style','color:rgba(50,50,50,.60)');
                             mew2.setAttribute('style','color:rgba(50,50,50,.60)');
@@ -45,7 +46,7 @@
 
 
                         } else {
-                            
+                            Logo.style.width = '180px';
                             Logo.setAttribute('src', '{{ url('/storage/' . $settings->logo) }}');
 
                             mew1.setAttribute('style','color:rgba(255,255,255,.95)');

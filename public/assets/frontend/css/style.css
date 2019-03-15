@@ -217,7 +217,6 @@ header .logo, header .logo-2{
 	color:#fff;
 	font-size:40px;
 	font-weight:300;
-	width: 180px;
 }
 header .logo-2{
 	color:#333;
@@ -266,10 +265,6 @@ header.smaller {
 	box-shadow: 8px 8px 40px 0px rgba(0,0,0,0.3);
 	*/
 }
-header.smaller .logo{
-	width: 120px;
-}
-
 header.smaller .btn-rsvp {
 	height: 100px;
 	padding-top: 55px;
@@ -975,10 +970,6 @@ header.header-mobile #logo{
 }
 header.header-mobile .logo {
 	display: inline-block;
-	width: 100px;
-}
-header.smaller .header-mobile  .logo{
-	width: 100px;
 }
 header.header-mobile .btn-rsvp {
 	padding-top: 40px;
