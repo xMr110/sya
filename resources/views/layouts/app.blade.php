@@ -237,18 +237,31 @@
             color: white;
         }
 
+        .linkedin {
+            background: #3B5998;
+            color: white;
+        }
+
         .youtube {
             background: #bb0000;
             color: white;
         }
     </style>
     <div class="icon-bar">
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="google"><i class="fa fa-google"></i></a>
-        <a href="#" class="instgram"><i class="fa fa-instagram"></i></a>
-        {{--<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>--}}
-        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        @if(isset($settings->facebook))
+            <a href="{{$settings->facebook}}" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        @endif
+        @if(isset($settings->twitter))
+            <a href="{{$settings->twitter}}" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        @endif
+        <!-- <a href="#" class="google" target="_blank"><i class="fa fa-google"></i></a> -->
+        @if(isset($settings->instagram))
+            <a href="{{$settings->instagram }}" class="instgram" target="_blank"><i class="fa fa-instagram"></i></a>
+        @endif
+         @if(isset($settings->linkedin))
+            <a href="{{$settings->linkedin}}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        @endif
+        <a href="https://www.youtube.com/channel/UCjfusGgFgy4SSoV_lAfZOrg" class="youtube" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a>
     </div>
 @include('layouts.scripts')
 
