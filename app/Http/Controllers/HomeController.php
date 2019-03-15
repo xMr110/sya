@@ -53,7 +53,7 @@ class HomeController extends Controller
             'message' => 'required',
         ]);
         Mail::to([
-            'email' => 'only4zenmate@gmail.com'
+            'email' => 'info@syrian-youth.org'
         ])->send(new ContactMail($request->all()));
 
         return back()->with('success', 'تم إرسال الرسالة بنجاح...');

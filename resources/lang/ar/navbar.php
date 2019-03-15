@@ -1,13 +1,13 @@
 <?php
+
 return array (
-    'home'=>'Home',
-    'blog'=>'Our Blog',
-    'guest'=>'Guest Blog',
-    'about'=>'About Us',
-    'what'=>'What We Do',
-    'programs'=>'Programs',
-    'english'=>'english',
-    'initiatives'=>'initiatives',
-
-
+  'home' => 'الرئيسية',
+  'blog' => 'مدونتنا',
+  'guest' => 'مدونة الزائر',
+  'about' => 'من نحن',
+  'what' => 'ماذا نفعل',
+  'apply' => 'برنامجنا التعليمي',
+  'english' => 'English',
+  'initiatives' => 'شبكتنا',
+  'programs' => 'برامجنا التعليمية',
 );

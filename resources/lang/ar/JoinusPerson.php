@@ -1,18 +1,21 @@
 <?php
-return array(
-    'title' => 'Individuals Membership',
-    'header_text' => 'If you are one of the Syrian youth and you are between 18 and 29 years old and interested in participating in the first Syrian youth Assembly and would like to get in touch with many young leaders, networks, public relations and decision makers at the level of humanitarian or regional political action and International organizations, United Nations organizations, Syrian youth networks, participation in international youth conferences, and the provision and dissemination of research, studies or articles on Syrian youth and their delivery to the largest group of Syrian youth or interested in academic training in areas such as:',
-    'line1' => 'Leadership and Management (Leadership Skills)',
-    'line2' => 'Negotiate and discuss skills',
-    'line3' => 'Dispute Resolution Mechanism',
-    'line4' => 'The way of discussion and dialogue within peace talks',
-    'line5' => 'Prevention of violence',
-    'header_text2' => 'And seeks to spread the voice of young people to deliver the voice of young Syrians and interested in the following topics:',
-    'text1' => 'Inclusion of the voices of youth in the peace process',
-    'text2' => 'Protecting young people',
-    'text3' => 'End sexual exploitation',
-    'text4' => 'Prevent extremism and recruit young people into extremist groups',
-    'text5' => 'Preparing Syrian youth for the post-conflict phase',
-    'lorem' => 'For more information please contact us :',
 
+return array (
+  'title' => 'عضوية الأفراد',
+  'header_text' => 'إذا كنت من الشباب السوري وكنت بين 18 و 29 سنة وتهتم بالمشاركة في أول تجمع للشباب السوري وترغب في التواصل مع العديد من القادة الشباب والشبكات والعلاقات العامة وصانعي القرار على مستوى العمل السياسي، الإنساني أو الإقليمي والمنظمات الدولية ومنظمات الأمم المتحدة وشبكات الشباب السورية والمشاركة في المؤتمرات الشبابية الدولية ، وتوفير ونشر البحوث والدراسات أو المقالات حول الشباب السوري وإيصالها إلى أكبر مجموعة من الشباب السوري، أو إذا كنت من المهتمين بالتدريب الأكاديمي في 
+ :مجالات مثل',
+  'line1' => '(القيادة والإدارة (مهارات القيادة',
+  'line2' => 'التفاوض ومناقشة المهارات',
+  'line3' => 'آلية حل النزاعات',
+  'line4' => 'طريقة النقاش والحوار داخل محادثات سلمية',
+  'line5' => 'منع العنف',
+  'header_text2' => 'وتسعى لنشر صوت الشباب لإيصال صوت الشباب السوري 
+ :ومهتم بالمواضيع التالية',
+  'text1' => 'تضمين أصوات الشباب في عملية السلام',
+  'text2' => 'حماية الشباب',
+  'text3' => 'وضع حدا للاستغلال الجنسي',
+  'text4' => 'منع التطرف وتجنيد الشباب في الجماعات المتطرفة',
+  'text5' => 'إعداد الشباب السوري لمرحلة ما بعد الصراع',
+  'lorem' => 'للمزيد من المعلومات، يرجى 
+ :الاتصال بنا',
 );

@@ -106,7 +106,7 @@
 
                             <div class="spacer-half"></div>
 
-                            <button type="submit" data-text="SUBMIT" class="btn btn-custom color-2"><span>SUBMIT</span></button>
+                            <button type="submit" data-text="SUBMIT" class="btn btn-custom color-2"><span>@lang('homepage.submit')</span></button>
 
 
                         </form>
@@ -139,9 +139,9 @@
                                 <h5 style="color: #000000; !important;">@lang('footer.sya_title')</h5>
                                 <div  class="tiny-border"><span></span></div>
                                 <ul>
-                                    <li><a style="color: #000000; !important;" href="/about">About Us</a></li>
-                                    <li><a  style="color: #000000; !important;" href="/post">Blog</a></li>
-                                    <li><a  style="color: #000000; !important;" href="/apply">Apply Now</a></li>
+                                    <li><a style="color: #000000; !important;" href="/about">@lang('footer.about_us')</a></li>
+                                    <li><a  style="color: #000000; !important;" href="/post">@lang('footer.blog')</a></li>
+                                    <li><a  style="color: #000000; !important;" href="/apply">@lang('footer.apply')</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        &copy; Copyright 2018 - DirectGroup
+                        @lang('footer.footer_center')
                     </div>
                 </div>
             </div>
