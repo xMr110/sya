@@ -62,9 +62,9 @@
                                     @if(isset($settings->address) && $settings->address != "")
                                     <span><i class="fa fa-map-marker fa-lg"></i>{{$settings->address}}</span>
                                          @endif
-                                    @if(isset($settings->phone) && $settings->phone != "")
+                                    <!-- @if(isset($settings->phone) && $settings->phone != "")
                                     <span><i class="fa fa-phone fa-lg"></i>{{$settings->phone}}</span>
-                                        @endif
+                                        @endif -->
                                     @if(isset($settings->email) && $settings->email != "")
                                     <span><i class="fa fa-envelope-o fa-lg"></i><a
                                             href="mailto:contact@example.com">{{$settings->email}}</a></span>
