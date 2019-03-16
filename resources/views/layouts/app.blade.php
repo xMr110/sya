@@ -48,9 +48,10 @@
         <div class="container-fluid" >
             <div class="row-fluid">
                 <div class="col-md-7 text-white"  @if( config('app.locale') == "ar" ) style="float:right;" @endif>
-                    <div  style="    padding-left: 33px;
-    padding-top: 80px;
-    padding-bottom: 68px;">
+                    <div  style="   padding-left: 33px;
+                                    padding-top: 80px;
+                                    padding-bottom: 68px;
+                                    padding-right: 70px;">
                         <h3>@lang('homepage.Contactus_title')</h3>
                         <div class="spacer-half"></div>
                         <div class="row" >
