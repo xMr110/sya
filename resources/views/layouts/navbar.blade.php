@@ -73,10 +73,10 @@
                     <li>
                         <a id="me1" href="/"><b>@lang('navbar.home')</b><span></span></a>
                     </li>
-                    <li><a id="me6" href="/programs"><b>@lang('navbar.programs')</b><span></span></a></li>
-                    <li><a id="me7"href="/initiative"><b>@lang('navbar.initiatives')</b><span></span></a></li>
-                    <li><a id="me5" href="/what_we_do"><b>@lang('navbar.what')</b><span></span></a></li>
                     <li><a id="me4"href="/about"><b>@lang('navbar.about')</b><span></span></a></li>
+                    <li><a id="me5" href="/what_we_do"><b>@lang('navbar.what')</b><span></span></a></li>
+                     <li><a id="me7"href="/initiative"><b>@lang('navbar.initiatives')</b><span></span></a></li>
+                    <li><a id="me6" href="/programs"><b>@lang('navbar.programs')</b><span></span></a></li>
                     <li><a id="me2" href="/post"><b>@lang('navbar.blog')</b><span></span></a></li>
                     <li><a id="me3" href="{{action('GuestblogController@index')}}"><b>@lang('navbar.guest')</b><span></span></a></li>
                     @if(config('app.locale') == "ar")
