@@ -9,7 +9,8 @@ class WhatwedoController extends Controller
 {
     public function index()
     {
-        $projects = Whatwedo::orderBy('Date','DESC')->get();
-        return view('layouts.pages.whatwedo',compact('projects'));
+    	return view('layouts.pages.whatwedo');
+        // $projects = Whatwedo::orderBy('Date','DESC')->get();
+        // return view('layouts.pages.whatwedo',compact('projects'));
     }
 }
