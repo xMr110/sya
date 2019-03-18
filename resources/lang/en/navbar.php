@@ -2,8 +2,8 @@
 
 return array (
   'home' => 'Home',
-  'blog' => 'Our Blog',
-  'guest' => 'Guest Blog',
+  'blog' => 'Blog',
+  'guest' => 'Voices of Youth',
   'about' => 'About Us',
   'what' => 'What We Do',
   'apply' => 'Educational program',

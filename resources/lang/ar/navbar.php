@@ -3,11 +3,11 @@
 return array (
   'home' => 'الرئيسية',
   'blog' => 'مدونتنا',
-  'guest' => 'مدونة الزائر',
+  'guest' => 'أصوات الشباب',
   'about' => 'من نحن',
   'what' => 'ماذا نفعل',
   'apply' => 'برنامجنا التعليمي',
   'english' => 'English',
   'initiatives' => 'شبكتنا',
-  'programs' => 'برامجنا التعليمية',
+  'programs' => 'برامجنا',
 );
