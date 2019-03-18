@@ -1,17 +1,16 @@
 <?php
-return array(
-    'about_title' => 'WHO WE ARE',
-    'about_title_q1' => 'Who are we?',
-    'about_lorem_q1' => 'The Syrian Youth Assembly was set up by a group of Syrian youth who were present at the World Humanitarian Summit in 2016. We are a platform for young Syrians to work together to build peace. This initiative is fully youth-led and we want to engage as many Syrian youth (18-29 years old) around the world.',
-    'about_title_q2' => 'What is our goal?',
-    'about_lorem_q2' => 'Syrian youth mobilise to influence and participate in the Syrian peace process and are supported to bring peace and rebuild Syria.',
-    'about_lorem2_q2' => 'Note: The peace process outlined focuses specifically on the civil war within Syria (between government and rebels) only and not with the wider regional conflict (which includes ISIS)',
 
-    'about_concerned_title' => 'We are specifically concerned with the following topics:',
-    'about_concerned_1' => 'Inclusion of youth voices in the peace process',
-    'about_concerned_2' => 'Protecting youth from detention and torture',
-    'about_concerned_3' => 'Ending sexual slavery and exploitation',
-    'about_concerned_4' => 'Preventing the radicalization and conscription of youth into extremist groups',
-    'about_concerned_5' => 'Preparing the youth for a role in the post-conflict Syria',
-
+return array (
+  'about_title' => 'من نحن',
+  'about_title_q1' => 'من نحن؟',
+  'about_lorem_q1' => 'تجمع الشباب السوري (SYA) هو عبارة عن منصة للشباب السوريين الذين يعملون معًا على بناء السلام والتنمية من اجل سوريا. تم تأسيس التجمع من قبل عدد من الشباب السوري الذين حضروا القمة العالمية للعمل الإنساني في عام 2016.',
+  'about_title_q2' => 'ماهو هدفنا؟',
+  'about_lorem_q2' => 'نحن نعمل مع الشباب السوري على التعبئة للتأثير والمشاركة في عملية السلام السورية. ودعم إحلال السلام وإعادة بناء سوريا وتمكين الشباب وبناء قدراتهم على المشاركة في عملية إحياء السلام  في سوريا ، بالإضافة إلى منحهم الفرصة لتدريب أنفسهم وتوسيع تصوراتهم من خلال التعلم الافتراضي عبر الإنترنت لدعم فرصهم في سوق العمل.',
+  'about_lorem2_q2' => 'على هذا النحو ، فإن المبادرة يقودها الشباب بالكامل (18-35 سنة) حيث نعمل على إشراك الشباب في محادثات السلام السورية. في هذا الصدد ، يعمل تجمع الشباب السوري بموجب قرار مجلس الأمن 2250 و 2419 بشأن الشباب والسلام والأمن ، والذي يشجع على مشاركة الشباب في مسارات السلام و في  هذا الصدد ندعم اشراك الشباب في محادثات السلام السورية حيث تجمع الشباب السوري هو من اعضاء غرفة المجتمع المدني.',
+  'about_concerned_title' => 'يتكون عملنا في دمج الشباب السوري في المجال السياسي والاجتماعي  من الأهداف والغايات التالية :',
+  'about_concerned_1' => 'زيادة الوعي الشامل حول عمليات السلام للشباب السوري ، والدعوة إلى السلام وحماية المدنيين في سوريا',
+  'about_concerned_2' => 'دعم الشباب في اكتساب فهم أفضل فيما يتعلق بالروابط بين المستويات المحلية والإقليمية والدولية ودعمهم في فهم الإمكانات الحقيقية لمشاركة الشباب على جميع المستويات وتحديدا في المحنة والمجتمع السوري ودعم الإدماج المنهجي والمشاركة والشراكة مع الشباب ، في جميع مراحل العمل الإنساني فيما يتعلق بسوريا.',
+  'about_concerned_3' => 'دعم اللاجئين الشباب ونشر قصص نجاحهم في العالم و دعم مشاركة الشباب على المستوى الدولي وصنع القرار من خلال إنشاء جسور بين المجتمع الدولي والشباب السوري.',
+  'about_concerned_4' => 'التعرف على قدرات وقدرات الشباب السوري وتعزيزها من أجل جعلهم فاعلين في المجال الإنساني ، وكذلك تمكين المبادرات المحلية التي يقودها الشباب.',
+  'about_concerned_5' => 'رفع الوعي بالتحديات التي يواجهها المدنيون ، وخاصة النساء والأطفال ، في السياق السوري.',
 );

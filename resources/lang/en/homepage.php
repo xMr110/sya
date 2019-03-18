@@ -2,8 +2,8 @@
 
 return array (
   'Main_title' => 'Syrian Youth Assembly',
-  'Main_subitile' => 'The Syrian Youth Assembly was set up by a group of Syrian youth who were present at the World Humanitarian Summit in 2016. We are a platform for young Syrians to work together to build peace. This initiative is fully youth-led and we want to engage as many Syrian youth (18-29 years old) around the world.',
-  'OutEducational_title' => 'Our educational program',
+  'Main_subitile' => 'The Syrian Youth Assembly was set up by a group of Syrian youth who were present at the World Humanitarian Summit in 2016. We are a platform for young Syrians to work together to build peace. This initiative is fully youth-led and we want to engage as many Syrian youth (18-35 years old) around the world.',
+  'OutEducational_title' => 'Our programs',
   'OutEducational_subtitle' => 'For every complex problem, there is an answer that is clear, simple, and wrong.',
   'OutEducational_apply' => 'Apply Now',
   'OutEducational_SubLorem' => 'With us Etc ....',
@@ -16,7 +16,7 @@ return array (
   'OurPartner_title' => 'OUR',
   'OurPartner_subtitle' => 'PARTNERS',
   'Contactus_title' => 'Get In Touch',
-  'Contactus_subtitle' => 'Main Office',
+  'Contactus_subtitle' => 'We are here',
   'Contactus_messageus' => 'Message Us',
   'Contactus_Name' => 'Your Name',
   'Contactus_Email' => 'Your Email',
@@ -29,5 +29,5 @@ return array (
   'Background_subtitle' => 'Your Title',
   'contact_blockquote' => 'We believe we are capable to build the future',
   'initiative_subtitle' => 'Our Network',
-  'submit' => 'Submit'
+  'submit' => 'Submit',
 );
