@@ -275,28 +275,28 @@
                 <div class="row sequence">
                     <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
                         <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics1}}" data-speed="2500">0</h3>
+                            <h3 class="timer" data-to="{{isset($settings->statics1)?$settings->statics1:''}}" data-speed="2500">0</h3>
                             <span>@lang('homepage.numriecTitle1')</span>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
                         <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics2}}">0</h3>
+                            <h3 class="timer" data-to="{{isset($settings->statics2)?$settings->statics2:''}}">0</h3>
                             <span>@lang('homepage.numriecTitle2')</span>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow" data-wow-delay=".5s">
                         <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics3}}">0</h3>
+                            <h3 class="timer" data-to="{{isset($settings->statics3)?$settings->statics3:''}}">0</h3>
                             <span>@lang('homepage.numriecTitle3')</span>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6 col-xs-6 sq-item wow">
                         <div class="de_count">
-                            <h3 class="timer" data-to="{{$settings->statics4}}" data-speed="2500">0</h3>
+                            <h3 class="timer" data-to="{{isset($settings->statics4)?$settings->statics4:''}}" data-speed="2500">0</h3>
                             <span>@lang('homepage.numriecTitle4')</span>
                         </div>
                     </div>
