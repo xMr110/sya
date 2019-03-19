@@ -332,16 +332,16 @@
                                                             <ul class="social">
                                                                 <li>
                                                                     <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
-                                                                       class="fa fa-facebook"></a></li>
+                                                                       class="fa fa-facebook" target="_blank" ></a></li>
                                                                 <li>
                                                                     <a href="http://{{json_decode($memmber->social,true)['google']}}"
-                                                                       class="fa fa-google-plus"></a></li>
+                                                                       class="fa fa-twitter" target="_blank"></a></li>
                                                                 <li>
                                                                     <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
-                                                                       class="fa fa-instagram"></a></li>
+                                                                       class="fa fa-instagram" target="_blank"></a></li>
                                                                 <li>
                                                                     <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
-                                                                       class="fa fa-linkedin"></a></li>
+                                                                       class="fa fa-linkedin" target="_blank"></a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
