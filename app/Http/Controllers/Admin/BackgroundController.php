@@ -15,7 +15,7 @@ class BackgroundController extends Controller
     }
     public function index()
     {
-        return view('admin.background.index');
+        return view('admin.Background.index');
     }
 
 
