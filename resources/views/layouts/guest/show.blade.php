@@ -56,9 +56,11 @@
                         @endif
 
                         <div class="widget widget-text">
-                            <h4>About Us</h4>
-                            <div class="small-border"></div>
-                            The Syrian Youth Assembly was set up by a group of Syrian youth who were present at the World Humanitarian Summit in 2016. We are a platform for young Syrians to work together to build peace. This initiative is fully youth-led and we want to engage as many Syrian youth (18-29 years old) around the world.
+                            <h4>@lang('footer.about_title')</h4>
+                            <div>
+                                 @lang('footer.about_lorem')
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
