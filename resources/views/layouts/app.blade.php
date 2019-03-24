@@ -162,8 +162,8 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-136337877-1"></script>
                                 <h5 style="color: #000000; !important;">@lang('footer.Join_us')</h5>
                                 <div  class="tiny-border"><span></span></div>
                                 <ul>
-                                    <li><a  style="color: #000000; !important;" href="#">@lang('homepage.JoinUs_Person')</a></li>
-                                    <li><a  style="color: #000000; !important;" href="#">@lang('homepage.JoinUs_Organisation')</a></li>
+                                    <li><a  style="color: #000000; !important;" href="https://docs.google.com/forms/d/e/1FAIpQLSe2JjlKoWB1mNa6Vpfg67kcT8DlXwqySrxmu3K0tUfnPlXRyA/viewform" target="_blank">@lang('homepage.JoinUs_Person')</a></li>
+                                    <li><a  style="color: #000000; !important;" href="https://docs.google.com/forms/d/e/1FAIpQLSeSo_hONfJLuhIf1Nie589be-ruE8J8LVxd7I_15zlsgPG3VQ/viewform" target="_blank">@lang('homepage.JoinUs_Organisation')</a></li>
                                 </ul>
                             </div>
                         </div>
