@@ -41,7 +41,7 @@
     </ul>
                         <br>
     <p class="lead"><span style="font-weight: 400;">@lang('JoinusCompany.lorem')</span></p>
-    <p class="lead"><span style="font-weight: 600;">@lang('JoinusCompany.lorem2_part1')</span><strong><a href="https://goo.gl/forms/CtaestpbRf4B6d2J3">@lang('JoinusCompany.lorem2_part2')</a>.</strong></p>
+    <p class="lead"><span style="font-weight: 600;">@lang('JoinusCompany.lorem2_part1')</span><strong><a href="https://goo.gl/forms/CtaestpbRf4B6d2J3" target="_blank">@lang('JoinusCompany.lorem2_part2')</a>.</strong></p>
 
                     </div>
                 </div>

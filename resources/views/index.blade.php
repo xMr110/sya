@@ -117,7 +117,7 @@
                                                 <div id="tab1" style="color: #fff;" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
                                                    {{$company->body}}
                                                 </div>
-                                                <a href="{{$company->link}}" target="_blank"
+                                                <a href="{{$company->link}}"
                                                    class="btn btn-custom color-2" id="button">Join</a>
 
 
@@ -130,7 +130,7 @@
                                                 <div id="tab2" style="color: #fff;" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
                                                   {{$person->body}}
                                                 </div>
-                                                <a href="{{$person->link}}" target="_blank"
+                                                <a href="{{$person->link}}"
                                                    class="btn btn-custom color-2">Join</a>
                                             </li>
                                         </div>

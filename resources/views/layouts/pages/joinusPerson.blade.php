@@ -44,7 +44,7 @@
                             <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text4')</span></li>
                             <li style="font-weight: 600;"><span style="font-weight: 600;">@lang('JoinusPerson.text5')</span></li>
                         </ol>
-                        <p class="lead">@lang('JoinusPerson.lorem')<a href="mailto:info@syrian-youth.org"  style="font-weight: 600;">info<wbr />@syrian-youth<wbr />.org</a></p>
+                        <p class="lead">@lang('JoinusPerson.lorem')<a href="https://docs.google.com/forms/d/e/1FAIpQLSe2JjlKoWB1mNa6Vpfg67kcT8DlXwqySrxmu3K0tUfnPlXRyA/viewform"  target="_blank" style="font-weight: 600;" >@lang('JoinusPerson.lorem2_part2')</a></p>
 
                     </div>
                 </div>
