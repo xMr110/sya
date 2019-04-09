@@ -17,6 +17,9 @@ Route::post('initiative/featured/{initiative}', 'InitiativeController@featured')
 Route::resource('program','ProgramController');
 Route::post('program/featured/{program}', 'ProgramController@featured');
 
+Route::resource('certificate','CertificateController');
+Route::post('certificate/featured/{certificate}', 'CertificateController@featured');
+
 
 Route::resource('post', 'PostController');
 Route::post('post/visible/{post}', 'PostController@visible');

@@ -8,6 +8,7 @@ use App\Models\Joinus;
 use App\Models\Ourteam;
 use App\Models\Partner;
 use App\Models\Program;
+use App\Models\Certificate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -33,6 +34,17 @@ class HomeController extends Controller
     {
         $program = Program::findOrFail($id);
         return view('layouts.programs.show',compact('program'));
+    }
+
+    public function certificates()
+    {
+        $certificates = Certificate::all();
+        return view('layouts.certificates.index',compact('certificates'));
+    }
+    public function certificate($id)
+    {
+        $certificate = Certificate::findOrFail($id);
+        return view('layouts.certificates.show',compact('certificate'));
     }
 
     public function support()

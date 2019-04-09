@@ -145,37 +145,55 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-136337877-1"></script>
 
                 <div class="col-md-6 col-md-offset-2" @if(config('app.locale') == "ar") style="float: right; margin-left: 0; margin-right: 15%;" @endif >
                     <div class="row">
-                        <div class="col-md-4 col-xs-4" @if(config('app.locale') == "ar") style="float: right;" @endif>
-                            <div class="widget" style="color: #000000; !important;">
-                                <h5 style="color: #000000; !important;">@lang('footer.sya_title')</h5>
-                                <div  class="tiny-border"><span></span></div>
-                                <ul>
-                                    <li><a style="color: #000000; !important;" href="/about">@lang('footer.about_us')</a></li>
-                                    <li><a  style="color: #000000; !important;" href="/post">@lang('footer.blog')</a></li>
-                                    <li><a  style="color: #000000; !important;" href="/apply">@lang('footer.apply')</a></li>
-                                </ul>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-4" @if(config('app.locale') == "ar") style="float: right;" @endif>
+                                <div class="widget" style="color: #000000; !important;">
+                                    <h5 style="color: #000000; !important;">@lang('footer.sya_title')</h5>
+                                    <div  class="tiny-border"><span></span></div>
+                                    <ul>
+                                        <li><a style="color: #000000; !important;" href="/about">@lang('footer.about_us')</a></li>
+                                        <li><a  style="color: #000000; !important;" href="/post">@lang('footer.blog')</a></li>
+                                        <li><a  style="color: #000000; !important;" href="/apply">@lang('footer.apply')</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-xs-4" @if(config('app.locale') == "ar") style="float: right;" @endif>
+                                <div class="widget"  style="color: #000000; !important;">
+                                    <h5 style="color: #000000; !important;">@lang('footer.Join_us')</h5>
+                                    <div  class="tiny-border"><span></span></div>
+                                    <ul>
+                                        <li><a  style="color: #000000; !important;" href="/person">@lang('homepage.JoinUs_Person')</a></li>
+                                        <li><a  style="color: #000000; !important;" href="/support">@lang('homepage.JoinUs_Organisation')</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-xs-4">
+                                <div class="widget"  style="color: #000000; !important;">
+                                    <h5 style="color: #000000; !important;">@lang('footer.help_title')</h5>
+                                    <div  class="tiny-border"><span></span></div>
+                                    <ul>
+                                        <li><a  style="color: #000000; !important;" href="#contact_form">@lang('footer.help_link')</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="col-md-4 col-xs-4" @if(config('app.locale') == "ar") style="float: right;" @endif>
-                            <div class="widget"  style="color: #000000; !important;">
-                                <h5 style="color: #000000; !important;">@lang('footer.Join_us')</h5>
-                                <div  class="tiny-border"><span></span></div>
-                                <ul>
-                                    <li><a  style="color: #000000; !important;" href="/person">@lang('homepage.JoinUs_Person')</a></li>
-                                    <li><a  style="color: #000000; !important;" href="/support">@lang('homepage.JoinUs_Organisation')</a></li>
-                                </ul>
+                        <div class="row">
+                            @if(isset($certificates))
+                            <p style="color: #000000;">@lang('footer.about_certificate')</p>
+                            <div class="row">
+                            @foreach($certificates as $certificate)
+                                <div class="col-md-2">
+                                <a href="{{action('HomeController@certificate',$certificate)}}">  <div class="image" >
+                                                            <img style="max-width: 100px;max-height: 80px;" src="{{url('/storage/'.$certificate->image_path)}}">
+                                                        </div>
+                                                        </a>
+                                                        </div>
+                                @endforeach
+                                
                             </div>
-                        </div>
-
-                        <div class="col-md-4 col-xs-4">
-                            <div class="widget"  style="color: #000000; !important;">
-                                <h5 style="color: #000000; !important;">@lang('footer.help_title')</h5>
-                                <div  class="tiny-border"><span></span></div>
-                                <ul>
-                                    <li><a  style="color: #000000; !important;" href="#contact_form">@lang('footer.help_link')</a></li>
-                                </ul>
-                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>

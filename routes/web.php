@@ -32,6 +32,9 @@ Route::get('/initiative/{id}/map', 'InitiativeController@getMap');
 Route::get('/programs','HomeController@programs');
 Route::get('/programs/{program}','HomeController@program');
 
+Route::get('/certificates','HomeController@certificates');
+Route::get('/certificates/{certificate}','HomeController@certificate');
+
 Route::get('/what_we_do' , 'WhatwedoController@index');
 Route::get('/support' , 'HomeController@support');
 Route::get('/person' , 'HomeController@person');

@@ -63,6 +63,17 @@
                 </li>
                 <li><a  class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                         <i
+                                class="mdi mdi-account-multiple"></i>
+                        <span class="hide-menu">
+                        الاعتمادات
+                    </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{action('Admin\CertificateController@index')}}">الكل </a></li>
+                        <li><a href="{{action('Admin\CertificateController@create')}}">جديد</a></li>
+                    </ul>
+                </li>
+                <li><a  class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <i
                             class="mdi mdi-account-multiple"></i>
                         <span class="hide-menu">
                         المنشورات

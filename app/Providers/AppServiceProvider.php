@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Background;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Setting;
+use App\Models\Certificate;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
 
@@ -29,9 +30,10 @@ class AppServiceProvider extends ServiceProvider
                 $settings = Cache::get('site_settings');
             }
 
-
+            $certificates = Certificate::all();
+            
             return [
-                $view->with('settings', $settings),
+                $view->with(compact('settings' , 'certificates')),
             ];
         });
     }
