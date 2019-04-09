@@ -91,7 +91,21 @@ class InitiativeController extends Controller
         return redirect(action('Admin\InitiativeController@index'))->with('success','تم الإنشاء بنجاح!');
     }
 
+    public function destroy($id)
+    {
 
+        $deleted = Initiative::findOrFail($id);
+
+            if (file_exists('/storage/'.$deleted->image_path))
+            {
+                unlink(storage_path('/storage/'.$deleted->image_path));
+            }
+        $deleted->delete();
+
+        return redirect(action('Admin\InitiativeController@index'))->with('success','تم الحذف بنجاح!');
+
+
+    }
 
     public function featured($id){
         $initiative = Initiative::findOrFail($id);
