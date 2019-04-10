@@ -315,104 +315,36 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h2 dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}"><span class="uptitle" style="color: #ff4836">@lang('homepage.OurTeam_title')</span>@lang('homepage.OurTeam_subtitle')</h2>
+                            <h2 dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}"><span class="uptitle" style="color: #ff4836">@lang('homepage.Blogs_title')</span>@lang('homepage.Blogs_subtitle')</h2>
                         </div>
-                        <div class="media-carousel carousel slide media-carousel" id="media">
-
-                            <div class="carousel-inner">
-                                @foreach($memmbers as $key => $memmber)
-                                    @if($key < 4)
-                                        @if($key ==0)
-                                            <div class="item active">
-                                                @endif
-                                                <div class="col-md-3 col-sm-6 ">
-                                                    <div class="our-team">
-                                                        <div class="pic">
-                                                            <img src="{{url('/storage/'.$memmber->image_path)}}">
-                                                            <ul class="social">
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
-                                                                       class="fa fa-facebook" target="_blank" ></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['google']}}"
-                                                                       class="fa fa-twitter" target="_blank"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
-                                                                       class="fa fa-instagram" target="_blank"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
-                                                                       class="fa fa-linkedin" target="_blank"></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                            <h3 class="title">{{$memmber->name}}</h3>
-                                                            <span class="post">{{$memmber->job_title}}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                @if($key == 3)
-                                            </div>
-                                        @endif
-                                    @endif
-
-                                    @if($key > 3 and $key % 4 == 0)
-                                        <div class="item text-center">
-                                            @endif
-                                            @if($key > 3)
-                                                <div class="col-md-3 col-sm-6 ">
-                                                    <div class="our-team">
-                                                        <div class="pic">
-                                                            <img src="{{url('/storage/'.$memmber->image_path)}}">
-                                                            <ul class="social">
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['facebook']}}"
-                                                                       class="fa fa-facebook"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['google']}}"
-                                                                       class="fa fa-google-plus"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['instagram']}}"
-                                                                       class="fa fa-instagram"></a></li>
-                                                                <li>
-                                                                    <a href="http://{{json_decode($memmber->social,true)['linkedin']}}"
-                                                                       class="fa fa-linkedin"></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="team-content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                            <h3 class="title">{{$memmber->name}}</h3>
-                                                            <span class="post">{{$memmber->job_title}}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                            @if(($key > 3 and $key % 4 == 3) )
-                                        </div>
-                                    @endif
-                                @endforeach
-
-                            </div>
-
-
-
-                            <ol class="carousel-indicators">
-                                @foreach($memmbers as $key => $memmber)
-                                    @if($key % 4 == 0)
-                                        <li data-target="#media" data-slide-to="{{ $key }}"
-                                            class="{{ !$key ? 'active' : '' }}"></li>
-                                    @endif
-                                @endforeach
-                            </ol>
-
-
-                        </div>
-                        <a data-slide="prev" href="#media" style="margin-top: 250px;" class="left carousel-control">‹</a>
-                        <a data-slide="next" href="#media" style="margin-top: 250px;" class="right carousel-control">›</a>
-
                     </div>
+                
+                <div class="row">
 
-                </div>
+                            @if($posts->count())
+                                <div class="col-md-12" style="text-align: center;">
+
+                                    <div class="ui link cards"  style="margin: 10px;">
+                                        @foreach($posts as $post)
+                                            <div class="card"  style="margin-right: auto;margin-left: auto">
+                                                <a href="{{action('BlogController@show',$post)}}">  <div class="image" style="width: 100%;  margin: auto; margin-top: 10%;margin-bottom: 10% ">
+                                                    <img style="width: 100%; height: 230px;" src="{{url('/storage/'.$post->image_path)}}">
+                                                </div>
+                                                </a>
+                                                <div class="content utest" style="text-align: center;">
+                                                    <div class="header">{{$post->title}}</div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <a href="/post" target="_blank"
+                                       class="btn btn-custom color-1" id="button">See More</a>
+                                </div>
+
+                            @endif
+                        </div>
+                        </div>
             </div>
-
         </section>
         <!-- section close -->
 
@@ -427,7 +359,7 @@
 @section('script')
 
 
-    <script>
+    <!-- <script>
 
 
 
@@ -462,7 +394,7 @@
 
         });
 
-    </script>
+    </script> -->
 
 
 
