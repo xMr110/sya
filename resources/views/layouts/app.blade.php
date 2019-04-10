@@ -184,14 +184,14 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-136337877-1"></script>
                             <p style="color: #000000;">@lang('footer.about_certificate')</p>
                             <div class="row" @if(config('app.locale') == "ar") style="text-align: right;" @endif>
                             @foreach($certificates as $certificate)
-                                <div class="col-md-2"  @if(config('app.locale') == "ar") style="float: right;" @endif>
-                                <a href="{{action('HomeController@certificate',$certificate)}}">  <div class="image" >
-                                                            <img style="max-width: 100px;max-height: 80px;" src="{{url('/storage/'.$certificate->image_path)}}" title="@lang($certificate->name)">
-                                                        </div>
-                                                        </a>
-                                                        </div>
-                                @endforeach
-                                
+                                <div class="col-md-2 col-xs-4" style="padding: 0 ; text-align: center; @if(config('app.locale') == "ar") float: right;" @endif>
+                                    <a href="{{action('HomeController@certificate',$certificate)}}">
+                                        <div class="image" >
+                                            <img style="max-width: 100%;max-height: 75px; margin-left: auto; margin-right: auto;" src="{{url('/storage/'.$certificate->image_path)}}" title="@lang($certificate->name)">
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
                             </div>
                             @endif
                         </div>
