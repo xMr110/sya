@@ -46,7 +46,7 @@
                     @if(isset($certificates) AND count($certificates) > 0)
                         <p class="lead"><strong>@lang('aboutus.about_certificate_title')</strong></p>
                         @foreach($certificates as $certificate)
-                            <div class="col-md-2 col-xs-4" style="text-align: center; padding: 0; @if(config('app.locale') == "ar") float: right;" @endif>
+                            <div class="col-md-2 col-xs-4" id="certificate" @if(config('app.locale') == "ar") style="float: right;" @endif>
                                 <a href="{{action('HomeController@certificate',$certificate)}}" target="_blank">
                                 <div class="image" >
                                     <img style="max-width: 200px;max-height: 100px;" src="{{url('/storage/'.$certificate->image_path)}}" title="@lang($certificate->name)">
@@ -174,6 +174,13 @@
         <!-- section close -->
 
     @endsection
+
+    <style>
+        #certificate{
+            text-align: center;
+            padding: 0;
+        }
+    </style>
 
     @section('script')
     <script>
