@@ -13,18 +13,18 @@ class CreateGpostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gposts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('checked_by')->nullable();
-            $table->string('email');
-            $table->string('name');
-            $table->string('title')->nullable();
-            $table->text('body')->nullable();
-            $table->tinyInteger('status')->default(0);
-            $table->string('image_path');
-            $table->tinyInteger('type')->default(0);
-            $table->timestamps();
-        });
+        // Schema::create('gposts', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->string('checked_by')->nullable();
+        //     $table->string('email');
+        //     $table->string('name');
+        //     $table->string('title')->nullable();
+        //     $table->text('body')->nullable();
+        //     $table->tinyInteger('status')->default(0);
+        //     $table->string('image_path');
+        //     $table->tinyInteger('type')->default(0);
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -34,6 +34,6 @@ class CreateGpostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gposts');
+        // Schema::dropIfExists('gposts');
     }
 }
