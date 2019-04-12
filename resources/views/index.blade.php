@@ -327,7 +327,7 @@
                                     <div class="ui link cards"  style="margin: 10px;">
                                         @foreach($posts as $post)
                                             <div class="card"  style="margin-right: auto;margin-left: auto">
-                                                <a href="{{action('BlogController@show',$post)}}">  <div class="image" style="width: 100%;  margin: auto; margin-top: 10%;margin-bottom: 10% ">
+                                                <a href="{{action('GuestblogController@show',$post)}}">  <div class="image" style="width: 100%;  margin: auto; margin-top: 10%;margin-bottom: 10% ">
                                                     <img style="width: 100%; height: 230px;" src="{{url('/storage/'.$post->image_path)}}">
                                                 </div>
                                                 </a>
@@ -337,7 +337,7 @@
                                             </div>
                                         @endforeach
                                     </div>
-                                    <a href="/post" target="_blank"
+                                    <a href="/Guest_Blog"
                                        class="btn btn-custom color-1" id="button">See More</a>
                                 </div>
 

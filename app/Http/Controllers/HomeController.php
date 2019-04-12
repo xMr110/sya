@@ -6,7 +6,7 @@ use App\Mail\ContactMail;
 use App\Models\Initiative;
 use App\Models\Joinus;
 use App\Models\Ourteam;
-use App\Models\Post;
+use App\Models\Gpost;
 use App\Models\Partner;
 use App\Models\Program;
 use App\Models\Certificate;
@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         // $memmbers=Ourteam::all();
-        $posts = Post::latest()->where('visible', 1)->paginate(3);
+        $posts = Gpost::latest()->paginate(3);
         $company = Joinus::where('slug','Company')->first();
         $person = Joinus::where('slug','Person')->first();
         $partners = Partner::all();
