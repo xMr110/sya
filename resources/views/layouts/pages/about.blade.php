@@ -180,6 +180,10 @@
             text-align: center;
             padding: 0;
         }
+
+        #section-team{
+            height: fit-content;
+        }
     </style>
 
     @section('script')
