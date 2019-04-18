@@ -56,7 +56,9 @@
                                         <a href="{{ action('Admin\GpostController@reject', $gpost) }}" data-toggle="tooltip"
                                            data-original-title="رفض"> <i
                                                 class="fa fa-times-circle text-inverse m-r-10"></i> </a>
-
+                                        <a href="{{ action('Admin\GpostController@edit', $gpost) }}" data-toggle="tooltip"
+                                           data-original-title="تعديل"> <i
+                                                class="fa fa-edit text-inverse m-r-10"></i> </a>
                                         <a href="#" data-toggle="tooltip" data-delete data-original-title="حذف"> <i
                                                 class="fa fa-trash text-danger"></i> </a>
                                         <form method="post"

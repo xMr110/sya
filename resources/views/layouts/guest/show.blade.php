@@ -20,7 +20,7 @@
     <!-- subheader close -->
 
     <!-- content begin -->
-    <div id="content" class="no-top no-bottom">
+    <div id="content" class="no-top no-bottom" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
         <section aria-label="section">
             <div class="container">
                 <div class="row">
@@ -31,7 +31,7 @@
 
                             <div class="post-text">
                                 <h3><a href="news-single.html">{{$gpost->title}}</a></h3>
-                                <p>{{$gpost->body}}.</p>
+                                <p>{!! $gpost->body !!}.</p>
                                 <span class="post-date">{{$gpost->created_at}}</span>
                                 <span class="post-auther">{{$gpost->name}}</span>
                             </div>

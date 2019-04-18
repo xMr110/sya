@@ -27,6 +27,7 @@ Route::post('post/visible/{post}', 'PostController@visible');
 Route::resource('Guest_post', 'GpostController');
 Route::get('Guest_post/{gpost}/approved','GpostController@approv');
 Route::get('Guest_post/{gpost}/rejected','GpostController@reject');
+Route::post('Guest_post/{gpost}/update','GpostController@update');
 
 Route::resource('what_we_do', 'WhatwedoController');
 

@@ -38,6 +38,13 @@
                             <div class="form-group col-md-12">
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
                             </div>
+                            <div class="form-group col-md-12" style="display: -webkit-inline-box">
+                                <label class="col-md-2 col-xs-6">Writing Language   </label>
+                                <select  class="col-md-2 col-xs-6" name="language" id="langauge" class="form-control group-select">
+                                    <option value="en"> English </option>
+                                    <option value="ar"> Arabic </option>
+                                </select>
+                            </div>
                             <div class="form-group col-md-12">
                                 <input type="text" class="form-control" name="title" id="inputAddress" placeholder="Title..">
                             </div>

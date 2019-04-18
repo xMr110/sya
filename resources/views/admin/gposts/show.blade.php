@@ -40,7 +40,7 @@
                         <br><br>
 
                         <div class="card">
-                            <img class="card-img-top img-responsive" src="{{ url('/storage/') . Auth::user()->image_path }}" alt="Card image cap">
+                            <img class="card-img-top img-responsive" src="{{ url('/storage/' . $gpost->image_path) }}" alt="Card image cap">
                         </div>
 
                     </div>

@@ -19,6 +19,7 @@ class CreateGpostTranslationTable extends Migration
             $table->string('checked_by')->nullable();
             $table->string('email');
             $table->string('name');
+            $table->string('writing_language')->default('en');
             $table->string('title')->nullable();
             $table->text('body')->nullable();
             $table->tinyInteger('status')->default(0);

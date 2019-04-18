@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\GpostRequest;
 use App\Models\Gpost;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,6 +28,8 @@ class GpostController extends Controller
       $id = Auth::user()->id;
       $admin = User::findOrFail($id);
       $gpost->checked_by = $admin->name;
+      $gpost->translateOrNew($gpost->writing_language)->title = $gpost->title;
+      $gpost->translateOrNew($gpost->writing_language)->body = $gpost->body;
       $gpost->save();
       return redirect(action('Admin\GpostController@index'))->with('success', 'تم الموافقة على التدوينة بنجاح !');
   }
@@ -51,6 +54,35 @@ class GpostController extends Controller
         $post->delete();
         return redirect(action('Admin\GpostController@index'))->with('success', 'تم حذف التدوينة بنجاح!');
 
+
+    }
+
+    public function edit($id)
+    { 
+      $gpost = Gpost::findOrFail($id);
+      return view('admin.gposts.edit',compact('gpost'));
+    }
+
+    public function update(Gpost $gpost, GpostRequest $request)
+    {
+        $UpdateGpost = Gpost::findOrFail($gpost->id);
+        if ($request->hasFile('image_path'))
+        {
+            if (file_exists(storage_path('app/public/' . $UpdateGpost->image_path)))
+            {
+                unlink(storage_path('app/public/' . $UpdateGpost->image_path));
+            }
+            $UpdateGpost->image_path = $request->file('image_path')->store('gposts','public');
+        }
+        foreach (\Localization::getSupportedLocales() as $key => $value)
+        {
+            if ($request->get('title_' . $key))
+                $UpdateGpost->translateOrNew($key)->title = $request->get('title_' . $key);
+            if ($request->get('body_' . $key))
+                $UpdateGpost->translateOrNew($key)->body = $request->get('body_' . $key);
+        }
+        $UpdateGpost->save();
+        return redirect(action('Admin\GpostController@index'))->with('success','تم تعديل المنشور بنجاح');
 
     }
 }

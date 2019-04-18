@@ -20,7 +20,7 @@
     <!-- subheader close -->
 
     <!-- content begin -->
-    <div id="content" class="no-top no-bottom">
+    <div id="content" class="no-top no-bottom" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
         <section aria-label="section-services">
             <div
             class="container">
