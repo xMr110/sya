@@ -23,7 +23,7 @@
                                 <th>#</th>
                                 <th>العنوان</th>
                                 <th>المحتوى</th>
-                                <th>الناشر</th>
+                                <!-- <th>الناشر</th> -->
                                 <th>تاريخ المنشور</th>
                                 <th>تاريخ أخر التعديل</th>
                                 <th>حالة المنشور</th>
@@ -36,7 +36,7 @@
                                 <td>{{$post->id}}</td>
                                 <td>{{str_limit($post->translate('ar')->title,10) }}</td>
                                 <td>{{str_limit($post->translate('ar')->body,10) }}</td>
-                                <td>{{$post->user->name}}</td>
+                                <!-- <td>post user name</td> -->
                                 <td>{{$post->created_at}}</td>
                                 <td>{{$post->updated_at}}</td>
                                 <td><span class="label label-{{ $post->visible == 1 ? 'success' :($post->visible ==0 ? 'warning' : '')}}">{{ $post->visible  == 1 ? 'مرئي' : ($post->visible  == 0 ? 'مخفي' : '') }}</span></td>
