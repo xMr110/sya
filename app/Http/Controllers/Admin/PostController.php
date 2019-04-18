@@ -51,7 +51,7 @@ class PostController extends Controller
         return redirect(action('Admin\PostController@index'))->with('success','تم النشر بنجاح!');
 
     }
-    public function update(PostRequest $request,Post $post)
+    public function update(Post $post, PostRequest $request)
     {
         $UpdatePost = Post::findOrFail($post->id);
         if ($request->hasFile('image_path'))
