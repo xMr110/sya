@@ -15,7 +15,7 @@ class GuestblogController extends Controller
         $this->middleware('auth', ['except' => ['store','index','write','show']]);
     }
     public function index()
-    {
+    {   
         $gposts= Gpost::all()->where('status', '1');
         return view('layouts.guest.index',compact('gposts'));
     }
@@ -32,13 +32,11 @@ class GuestblogController extends Controller
         }
         $gpost->name = $request->get('name');
         $gpost->email = $request->get('email');
-        $gpost->title = $request->get('title');
-        $gpost->body = $request->get('body');
+        $gpost->title_origin = $request->get('title');
+        $gpost->body_origin = $request->get('body');
+        $gpost->writing_language = $request->get('language');
         $gpost->save();
         return redirect(action('GuestblogController@index'))->with('success','تم إرسال التدوينة النجاح بإنتظار الموافقة..');
-
-//
-
 
     }
 

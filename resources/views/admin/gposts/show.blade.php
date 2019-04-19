@@ -22,13 +22,13 @@
                         <label for="title">العنوان</label>
                         <textarea class="form-control form-control-line" rows="5"
                                   name="title"
-                                  placeholder="العنوان" readonly>{{isset($gpost)?$gpost->title:old('title')??''}}</textarea>
+                                  placeholder="العنوان" readonly>{{isset($gpost)?$gpost->title_origin:old('title')??''}}</textarea>
                         </div>
                         <div class="col-md-6">
                         <label for="body">المحتوى</label>
                         <textarea class="form-control form-control-line" rows="5"
                                   name="body"
-                                  placeholder="المحتوى" readonly>{{isset($gpost)?$gpost->body:old('body')??''}}</textarea>
+                                  placeholder="المحتوى" readonly>{{isset($gpost)?$gpost->body_origin:old('body')??''}}</textarea>
                     </div>
 
                     <div class="col-md-4">

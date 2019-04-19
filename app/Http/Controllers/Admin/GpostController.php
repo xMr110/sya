@@ -28,8 +28,18 @@ class GpostController extends Controller
       $id = Auth::user()->id;
       $admin = User::findOrFail($id);
       $gpost->checked_by = $admin->name;
-      $gpost->translateOrNew($gpost->writing_language)->title = $gpost->title;
-      $gpost->translateOrNew($gpost->writing_language)->body = $gpost->body;
+      //filling translations
+      foreach (\Localization::getSupportedLocales() as $key => $value)
+      {
+          if ($gpost->writing_language == $key){
+            $gpost->translateOrNew($key)->title = $gpost->title_origin;
+            $gpost->translateOrNew($key)->body = $gpost->body_origin;
+          }
+          else{
+            $gpost->translateOrNew($key)->title = Null;
+            $gpost->translateOrNew($key)->body = Null;
+          }
+      }
       $gpost->save();
       return redirect(action('Admin\GpostController@index'))->with('success', 'تم الموافقة على التدوينة بنجاح !');
   }

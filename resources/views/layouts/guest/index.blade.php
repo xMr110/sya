@@ -37,6 +37,7 @@
                 @if($gposts->count())
                     <div class="row el-element-overlay">
                     @foreach($gposts as $gpost)
+                    @if($gpost->body != Null)
                         <div class="col-lg-3 col-md-6">
                             <div class="card" style="background-color: #fff3cd">
                                 <div class="el-card-item">
@@ -55,6 +56,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                     @endforeach
                 </div>
                 @else

@@ -37,7 +37,7 @@
                             @foreach($gposts as $gpost)
                                 <tr>
                                     <td>{{$gpost->id}}</td>
-                                    <td>{{$gpost->title }}</td>
+                                    <td>{{$gpost->title_origin }}</td>
                                     <td>{{$gpost->name}}</td>
                                     <td>{{$gpost->email}}</td>
                                     <td>{{$gpost->created_at->format("M/d/Y")}}</td>

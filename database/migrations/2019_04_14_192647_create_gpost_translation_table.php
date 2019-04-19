@@ -20,8 +20,8 @@ class CreateGpostTranslationTable extends Migration
             $table->string('email');
             $table->string('name');
             $table->string('writing_language')->default('en');
-            $table->string('title')->nullable();
-            $table->text('body')->nullable();
+            $table->string('title_origin')->nullable();
+            $table->text('body_origin')->nullable();
             $table->tinyInteger('status')->default(0);
             $table->string('image_path');
             $table->tinyInteger('type')->default(0);
