@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    {{ isset($gpost) ? 'تعديل' : 'إضافة منشور' }}
+    {{ isset($post) ? 'تعديل' : 'إضافة منشور' }}
 @endsection
 @section('bread')
     <li class="breadcrumb-item"><a href="{{ action('Admin\GpostController@index') }}">جميع المنشورات</a></li>
@@ -18,18 +18,25 @@
 
                     <h4 class="card-title">منشور جديد</h4>
                     <form class="form-material" enctype="multipart/form-data"
-                          action="{{action('Admin\GpostController@update', $gpost)}}"
+                          action="{{action('Admin\GpostController@store')}}"
                           method="post">
                         {{ csrf_field() }}
 
-                        @if(isset($gpost))
+                        @if(isset($post))
                             {{ method_field('PATCH') }}
                         @endif
-                        <input id="name" name="name" type="hidden" value="{{isset($gpost->name) ? $gpost->name : '_' }}">
-                        <input id="email" name="email" type="hidden" value="{{isset($gpost->email) ? $gpost->email : '_' }}">
-                        <input id="title" name="title" type="hidden" value="{{isset($gpost->title) ? $gpost->title : '_' }}">
-                        <input id="body" name="body" type="hidden" value="{{isset($gpost->body) ? $gpost->body : '_' }}">
 
+                        <input id="title" name="title" type="hidden" value="{{isset($gpost->title_origin) ? $gpost->title_origin : '_' }}">
+                        <input id="body" name="body" type="hidden" value="{{isset($gpost->body_origin) ? $gpost->body_origin : '_' }}">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control form-control-line" name="name" id="name" placeholder="Name.." value="{{ isset($gpost) ? isset($gpost->name) ? $gpost->name : old("name") ?? '' : old("name") ?? '' }}"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" value="{{ isset($gpost) ? isset($gpost->email) ? $gpost->email : old("email") ?? '' : old("email") ?? '' }}"/>
+                            </div>
+                        </div>
                         <div class="row p-t-20">
 
                             <div class="col-md-12">
@@ -83,9 +90,6 @@
                                             الصورة {{ isset($gpost) ? '' : '*' }}
                                         </h3>
                                     </label>
-                                    <div style="max-width: 250px; text-align: center;">
-                                        <img  src="{{ url('/storage/' .$gpost->image_path) }}" class="img-responsive" alt="">
-                                    </div>
                                     <input type="file" name="image_path" class="form-control form-control-line">
                                 </div>
                             </div>

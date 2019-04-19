@@ -12,6 +12,6 @@ class Gpost extends Model
     public $translatedAttributes = [
         'title', 'body'
     ];
-    protected $fillable = ['image_path','type','title','body'];
+    protected $fillable = ['image_path','type','title_origin','body_origin'];
 
 }

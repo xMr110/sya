@@ -91,6 +91,7 @@
                     </span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="{{action('Admin\GpostController@index')}}">الكل </a></li>
+                        <li><a href="{{action('Admin\GpostController@create')}}">جديد </a></li>
                     </ul>
                 </li>
                 <li><a  class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">

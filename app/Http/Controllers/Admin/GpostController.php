@@ -11,16 +11,22 @@ use Illuminate\Support\Facades\Auth;
 
 class GpostController extends Controller
 {
-    public function index()
-    {
-        $gposts=Gpost::all();
-        return view('admin.gposts.index',compact('gposts'));
-    }
-    public function show($id)
-    {
-        $gpost = Gpost::findOrFail($id);
-        return view('admin.gposts.show',compact('gpost'));
-    }
+  public function index()
+  {
+      $gposts=Gpost::all();
+      return view('admin.gposts.index',compact('gposts'));
+  }
+  public function show($id)
+  {
+      $gpost = Gpost::findOrFail($id);
+      return view('admin.gposts.show',compact('gpost'));
+  }
+
+  public function create()
+  {
+      return view('admin.gposts.create');
+  }
+
   public function Approv(Gpost $gpost)
   {
       $gpost = Gpost::findOrFail($gpost->id);
@@ -74,7 +80,7 @@ class GpostController extends Controller
     }
 
     public function update(Gpost $gpost, GpostRequest $request)
-    {
+    { 
         $UpdateGpost = Gpost::findOrFail($gpost->id);
         if ($request->hasFile('image_path'))
         {
@@ -93,6 +99,38 @@ class GpostController extends Controller
         }
         $UpdateGpost->save();
         return redirect(action('Admin\GpostController@index'))->with('success','تم تعديل المنشور بنجاح');
+
+    }
+
+    public function store(GpostRequest $request)
+    {   
+      $this->validate($request,['image_path'=> 'required|image']);
+
+      $gpost = new Gpost();
+      $gpost->status = 1;
+      $id = Auth::user()->id;
+      $admin = User::findOrFail($id);
+      $gpost->checked_by = $admin->name;
+      $gpost->email = $request->email;
+      $gpost->name = $request->name;
+      $gpost->title_origin = $request->title_en;
+      $gpost->body_origin = $request->title_ar;
+
+      if($request->hasFile('image_path'))
+      {
+          $gpost->image_path= $request->file('image_path')->store('gposts','public');
+      }
+      //filling translations
+      foreach (\Localization::getSupportedLocales() as $key => $value)
+      {
+          if ($request->get('title_' . $key))
+              $gpost->translateOrNew($key)->title = $request->get('title_' . $key);
+          if ($request->get('body_' . $key))
+              $gpost->translateOrNew($key)->body = $request->get('body_' . $key);
+      }
+      $gpost->save();
+
+      return redirect(action('Admin\GpostController@index'))->with('success','تم النشر بنجاح!');
 
     }
 }
