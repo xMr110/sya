@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         // $memmbers=Ourteam::all();
-        $posts = Gpost::latest()->paginate(3);
+        $posts = Gpost::latest()->where('status', '1')->paginate(3);
         $company = Joinus::where('slug','Company')->first();
         $person = Joinus::where('slug','Person')->first();
         $partners = Partner::all();
