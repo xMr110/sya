@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 @section('title')
-    {{ isset($post) ? 'تعديل' : 'إضافة منشور' }}
+    {{ isset($gpost) ? 'تعديل' : 'إضافة منشور' }}
 @endsection
 @section('bread')
     <li class="breadcrumb-item"><a href="{{ action('Admin\GpostController@index') }}">جميع المنشورات</a></li>
@@ -22,7 +22,7 @@
                           method="post">
                         {{ csrf_field() }}
 
-                        @if(isset($post))
+                        @if(isset($gpost))
                             {{ method_field('PATCH') }}
                         @endif
 

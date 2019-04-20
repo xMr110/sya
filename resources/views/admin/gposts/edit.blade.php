@@ -22,14 +22,19 @@
                           method="post">
                         {{ csrf_field() }}
 
-                        @if(isset($gpost))
-                            {{ method_field('PATCH') }}
-                        @endif
-                        <input id="name" name="name" type="hidden" value="{{isset($gpost->name) ? $gpost->name : '_' }}">
-                        <input id="email" name="email" type="hidden" value="{{isset($gpost->email) ? $gpost->email : '_' }}">
-                        <input id="title" name="title" type="hidden" value="{{isset($gpost->title) ? $gpost->title : '_' }}">
-                        <input id="body" name="body" type="hidden" value="{{isset($gpost->body) ? $gpost->body : '_' }}">
+                        <input id="title" name="title" type="hidden" value="{{isset($gpost->title_origin) ? $gpost->title_origin : '_' }}">
+                        <input id="body" name="body" type="hidden" value="{{isset($gpost->body_origin) ? $gpost->body_origin : '_' }}">
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control form-control-line" name="name" id="name" placeholder="Name.." value="{{ isset($gpost) ? isset($gpost->name) ? $gpost->name : old("name") ?? '' : old("name") ?? '' }}"/>
+                            </div>
+                            <div class="col-md-6">
+                                <textarea class="form-control form-control-line" rows="1"
+                                          name="email"
+                                          placeholder="العنوان" readonly>{{isset($gpost)?$gpost->email:old('email')??''}}</textarea>
+                            </div>
+                        </div>
                         <div class="row p-t-20">
 
                             <div class="col-md-12">
