@@ -85,15 +85,31 @@
                     <h1 id="title"></h1>
                 </div>
                 <div  class="row" style="padding: 30px;">
-                    <div id="image"  class="col-md-4">
+                    <div id="image" class="col-md-4">
                     </div>
                     <div  class=" col-md-6">
-                        <h5 id="site"></h5>
-                        <h5 id="facebook"></h5>
-                        <h5 id="phone"></h5>
+                        
                         <p id="description"></p>
+                        <p id="address"></p>
 
 
+                    </div>
+                </div>
+                    <div class="row" style="padding-left: 30px;">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-1" style=" font-size:xx-large; ">
+                            <a id = "facebook" class="fa fa-facebook" target="_blank" ></a>
+                        </div>
+                        <div class="col-md-1" style="font-size:xx-large; ">
+                            <a id = "twitter" class="fa fa-twitter" target="_blank" ></a>
+                        </div>
+                        <div class="col-md-1" style="font-size:xx-large; ">
+                            <a id = "site" class="fa fa-globe" target="_blank" ></a>
+                        </div>
+                        <div class="col-md-4" style="font-size:large; display: inline">
+                            <p class="fa fa-phone" id="phone"></p>
+                        </div>
+                        
                     </div>
                     <div class="row" style="padding: 20px;">
                         <div style="display: none" id="mapinfo"></div>
@@ -116,7 +132,6 @@
                                 }
                             </style>
                         </div>
-                    </div>
 
                 </div>
             </div>
@@ -129,11 +144,12 @@
 @section('script')
     <script>
         $('.Pass-id').click(function () {
-            document.getElementById("title").innerText =$(this).data('id').name;
+            document.getElementById("title").innerText =$(this).data('id').name + '  :  ' + $(this).data('id').type;
             document.getElementById("description").innerText =$(this).data('id').description;
-            document.getElementById("site").innerText ="SITE: "+$(this).data('id').site;
-            document.getElementById("facebook").innerText ="FB Page: "+$(this).data('id').facebook;
-            document.getElementById("phone").innerText ="Phone: "+$(this).data('id').phone;
+            document.getElementById("site").href ="SITE: "+$(this).data('id').site;
+            document.getElementById("facebook").href ="FB Page: "+$(this).data('id').facebook;
+            document.getElementById("twitter").href ="FB Page: "+$(this).data('id').twitter;
+            document.getElementById("phone").innerText = " : " +$(this).data('id').phone;
             $.ajax({
                 url: '/initiative/{id}/image',
                 type: 'GET',

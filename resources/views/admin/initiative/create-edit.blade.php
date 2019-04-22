@@ -29,11 +29,22 @@
                             @foreach(Localization::getSupportedLocales() as $key => $locale)
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name_{{$key}}">العنوان {{$locale->native()}}</label>
+                                        <label for="name_{{$key}}">الاسم {{$locale->native()}}</label>
                                         <input type="text" class="form-control form-control-line"
                                                name="name_{{$key}}"
                                                placeholder="الاسم ب {{$locale->native()}}.. "
                                                value="{{ isset($initiative) ? isset($initiative->translate($key)->name) ? $initiative->translate($key)->name : old("name_". $key) ?? '' : old("name_". $key) ?? '' }} "/>
+                                    </div>
+                                </div>
+                            @endforeach
+                            @foreach(Localization::getSupportedLocales() as $key => $locale)
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="type_{{$key}}">التوصيف {{$locale->native()}}</label>
+                                        <input type="text" class="form-control form-control-line"
+                                               name="type_{{$key}}"
+                                               placeholder="الاسم ب {{$locale->native()}}.. "
+                                               value="{{ isset($initiative) ? isset($initiative->translate($key)->type) ? $initiative->translate($key)->type : old("type_". $key) ?? '' : old("type_". $key) ?? '' }} "/>
                                     </div>
                                 </div>
                             @endforeach
@@ -45,6 +56,17 @@
                                                name="description_{{$key}}"
                                                placeholder="description for {{$locale->native()}}.. "
                                                value="{{ isset($initiative) ? isset($initiative->translate($key)->description) ? $initiative->translate($key)->description : old("description_". $key) ?? '' : old("description_". $key) ?? '' }} "/>
+                                    </div>
+                                </div>
+                            @endforeach
+                            @foreach(Localization::getSupportedLocales() as $key => $locale)
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="address_{{$key}}">العنوان {{$locale->native()}}</label>
+                                        <input type="text" class="form-control form-control-line"
+                                               name="address_{{$key}}"
+                                               placeholder="الاسم ب {{$locale->native()}}.. "
+                                               value="{{ isset($initiative) ? isset($initiative->translate($key)->address) ? $initiative->translate($key)->address : old("address_". $key) ?? '' : old("address_". $key) ?? '' }} "/>
                                     </div>
                                 </div>
                             @endforeach
@@ -61,6 +83,16 @@
                                            name="facebook"
                                            placeholder="الرابط هنا"
                                            value="{{isset($initiative)?$initiative->facebook:old('facebook')??''}}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="twitter">Twitter</label>
+                                    <input type="text" class="form-control form-control-line"
+                                           name="twitter"
+                                           placeholder="الرابط هنا"
+                                           value="{{isset($initiative)?$initiative->twitter:old('twitter')??''}}"
                                     />
                                 </div>
                             </div>

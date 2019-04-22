@@ -17,6 +17,7 @@ class CreateInitiativesTable extends Migration
             $table->increments('id');
             $table->string('image_path')->nullable();
             $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
             $table->string('site')->nullable();
             $table->integer('lat')->nullable();
             $table->integer('long')->nullable();
@@ -28,7 +29,9 @@ class CreateInitiativesTable extends Migration
             $table->increments('id');
             $table->integer('initiative_id')->unsigned();
             $table->string('name')->nullable();
+            $table->string('type')->nullable();
             $table->text('description')->nullable();
+            $table->text('address')->nullable();
             $table->string('locale')->index();
 
             $table->unique(['initiative_id','locale']);

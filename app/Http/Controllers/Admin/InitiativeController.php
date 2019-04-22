@@ -41,6 +41,8 @@ class InitiativeController extends Controller
             $initiative->site=$request->site;
         if($request->has('facebook'))
             $initiative->facebook=$request->facebook;
+        if($request->has('twitter'))
+            $initiative->twitter=$request->twitter;
         if($request->has('lat'))
             $initiative->lat=$request->lat;
         if($request->has('long'))
@@ -51,6 +53,10 @@ class InitiativeController extends Controller
         {
             if ($request->get('name_' . $key))
                 $initiative->translateOrNew($key)->name = $request->get('name_' . $key);
+            if ($request->get('type_' . $key))
+                $initiative->translateOrNew($key)->type = $request->get('type_' . $key);
+            if ($request->get('address_' . $key))
+                $initiative->translateOrNew($key)->address = $request->get('address_' . $key);
             if ($request->get('description_' . $key))
                 $initiative->translateOrNew($key)->description = $request->get('description_' . $key);
         }
@@ -73,6 +79,9 @@ class InitiativeController extends Controller
         $initiative->site=$request->site;
         if($request->has('facebook'))
             $initiative->facebook=$request->facebook;
+         if($request->has('facebook'))
+            $initiative->twitter=$request->twitter;
+        if($request->has('lat'))
         if($request->has('lat'))
             $initiative->lat=$request->lat;
         if($request->has('long'))
@@ -83,6 +92,10 @@ class InitiativeController extends Controller
         {
             if ($request->get('name_' . $key))
                 $initiative->translateOrNew($key)->name = $request->get('name_' . $key);
+            if ($request->get('type_' . $key))
+                $initiative->translateOrNew($key)->type = $request->get('type_' . $key);
+            if ($request->get('address_' . $key))
+                $initiative->translateOrNew($key)->address = $request->get('address_' . $key);
             if ($request->get('description_' . $key))
                 $initiative->translateOrNew($key)->description = $request->get('description_' . $key);
         }
