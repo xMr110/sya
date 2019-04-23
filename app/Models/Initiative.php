@@ -11,7 +11,7 @@ class Initiative extends Model
     public $translatedAttributes = [
         'name','type','description','address',
     ];
-    protected $fillable = ['image_path','phone','site','facebook','twitter','lat','long'];
+    protected $fillable = ['image_path','phone','site','facebook','twitter','email','lat','long'];
     //
     public function scopeFeatured($query){
         return $query->where('featured', 1);

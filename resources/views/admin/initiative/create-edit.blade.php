@@ -116,6 +116,16 @@
                                     />
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">ُEmail</label>
+                                    <input type="text" class="form-control form-control-line"
+                                           name="email"
+                                           placeholder="الرابط هنا"
+                                           value="{{isset($initiative)?$initiative->email:old('email')??''}}"
+                                    />
+                                </div>
+                            </div>
 
                             <div class="col-md-12">
                                 <h3>

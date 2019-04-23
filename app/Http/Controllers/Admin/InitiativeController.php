@@ -43,6 +43,8 @@ class InitiativeController extends Controller
             $initiative->facebook=$request->facebook;
         if($request->has('twitter'))
             $initiative->twitter=$request->twitter;
+        if($request->has('email'))
+            $initiative->email=$request->email;
         if($request->has('lat'))
             $initiative->lat=$request->lat;
         if($request->has('long'))
@@ -79,9 +81,10 @@ class InitiativeController extends Controller
         $initiative->site=$request->site;
         if($request->has('facebook'))
             $initiative->facebook=$request->facebook;
-         if($request->has('facebook'))
+        if($request->has('twitter'))
             $initiative->twitter=$request->twitter;
-        if($request->has('lat'))
+        if($request->has('email'))
+            $initiative->email=$request->email;
         if($request->has('lat'))
             $initiative->lat=$request->lat;
         if($request->has('long'))

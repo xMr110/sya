@@ -96,7 +96,7 @@
                     </div>
                 </div>
                     <div class="row" style="padding-left: 30px;">
-                        <div class="col-md-4"></div>
+                        <div class="col-md-1"></div>
                         <div class="col-md-1" style=" font-size:xx-large; ">
                             <a id = "facebook" class="fa fa-facebook" target="_blank" ></a>
                         </div>
@@ -106,8 +106,11 @@
                         <div class="col-md-1" style="font-size:xx-large; ">
                             <a id = "site" class="fa fa-globe" target="_blank" ></a>
                         </div>
-                        <div class="col-md-4" style="font-size:large; display: inline">
+                        <div class="col-md-3" style="font-size:large; display: inline">
                             <p class="fa fa-phone" id="phone"></p>
+                        </div>
+                        <div class="col-md-3" style="font-size:large; display: inline">
+                            <p class="fa fa-envelope" id="email"></p>
                         </div>
                         
                     </div>
@@ -146,10 +149,12 @@
         $('.Pass-id').click(function () {
             document.getElementById("title").innerText =$(this).data('id').name + '  :  ' + $(this).data('id').type;
             document.getElementById("description").innerText =$(this).data('id').description;
-            document.getElementById("site").href ="SITE: "+$(this).data('id').site;
-            document.getElementById("facebook").href ="FB Page: "+$(this).data('id').facebook;
-            document.getElementById("twitter").href ="FB Page: "+$(this).data('id').twitter;
+            document.getElementById("address").innerText = "ADDRESS: "+$(this).data('id').address;
+            document.getElementById("site").href = $(this).data('id').site;
+            document.getElementById("facebook").href = $(this).data('id').facebook;
+            document.getElementById("twitter").href = $(this).data('id').twitter;
             document.getElementById("phone").innerText = " : " +$(this).data('id').phone;
+            document.getElementById("email").innerText = " : " +$(this).data('id').email;
             $.ajax({
                 url: '/initiative/{id}/image',
                 type: 'GET',

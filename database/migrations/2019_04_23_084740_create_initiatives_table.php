@@ -19,8 +19,9 @@ class CreateInitiativesTable extends Migration
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('site')->nullable();
-            $table->integer('lat')->nullable();
-            $table->integer('long')->nullable();
+            $table->string('email')->nullable();
+            $table->decimal('lat',12,9)->nullable();
+            $table->decimal('long',12,9)->nullable();
             $table->integer('phone');
             $table->tinyInteger('featured')->default(0);
             $table->timestamps();
