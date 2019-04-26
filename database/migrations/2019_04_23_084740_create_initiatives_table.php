@@ -22,7 +22,7 @@ class CreateInitiativesTable extends Migration
             $table->string('email')->nullable();
             $table->decimal('lat',12,9)->nullable();
             $table->decimal('long',12,9)->nullable();
-            $table->integer('phone');
+            $table->string('phone', 40);
             $table->tinyInteger('featured')->default(0);
             $table->timestamps();
         });
