@@ -109,7 +109,7 @@
                         <div class="col-md-3" style="font-size:large; display: inline">
                             <p class="fa fa-phone" id="phone"></p>
                         </div>
-                        <div class="col-md-3" style="font-size:large; display: inline">
+                        <div class="col-md-4" style="font-size:large; display: inline">
                             <p class="fa fa-envelope" id="email"></p>
                         </div>
                         

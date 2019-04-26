@@ -224,49 +224,67 @@
         <!-- section close -->
 
         <div id="MyModal"  class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div style="border-bottom: 1px solid grey; padding: 20px; margin: 10px;" class="row">
-                        <h1 id="title"></h1>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div style="border-bottom: 1px solid grey; padding: 20px; margin: 10px;" class="row">
+                    <h1 id="title"></h1>
+                </div>
+                <div  class="row" style="padding: 30px;">
+                    <div id="image" class="col-md-4">
                     </div>
-                    <div  class="row" style="padding: 30px;">
-                        <div id="image"  class="col-md-4">
-                        </div>
-                        <div  class=" col-md-6">
-                            <h5 id="site"></h5>
-                            <h5 id="facebook"></h5>
-                            <h5 id="phone"></h5>
-                            <p id="description"></p>
+                    <div  class=" col-md-6">
+                        
+                        <p id="description"></p>
+                        <p id="address"></p>
 
-
-                        </div>
-                        <div class="row" style="padding: 20px;">
-                            <div style="display: none" id="mapinfo"></div>
-                            <div style="padding: 10px;" class="mapouter" id="mapouter">
-
-                                <div  class="map" id="map"></div>
-
-
-                                <style>
-                                    .mapouter {
-                                        text-align: right;
-                                        height: 100%;
-                                        width: 100%;
-                                    }
-                                    .map {
-                                        overflow: hidden;
-                                        background: none !important;
-                                        height: 100%px;
-                                        width: 100%;
-                                    }
-                                </style>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
+                    <div class="row" style="padding-left: 30px;">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1" style=" font-size:xx-large; ">
+                            <a id = "facebook" class="fa fa-facebook" target="_blank" ></a>
+                        </div>
+                        <div class="col-md-1" style="font-size:xx-large; ">
+                            <a id = "twitter" class="fa fa-twitter" target="_blank" ></a>
+                        </div>
+                        <div class="col-md-1" style="font-size:xx-large; ">
+                            <a id = "site" class="fa fa-globe" target="_blank" ></a>
+                        </div>
+                        <div class="col-md-3" style="font-size:large; display: inline">
+                            <p class="fa fa-phone" id="phone"></p>
+                        </div>
+                        <div class="col-md-4" style="font-size:large; display: inline">
+                            <p class="fa fa-envelope" id="email"></p>
+                        </div>
+                        
+                    </div>
+                    <div class="row" style="padding: 20px;">
+                        <div style="display: none" id="mapinfo"></div>
+                        <div style="padding: 10px;" class="mapouter" id="mapouter">
+
+                            <div  class="map" id="map"></div>
+
+
+                            <style>
+                                .mapouter {
+                                    text-align: right;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                                .map {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            </style>
+                        </div>
+
+                </div>
             </div>
         </div>
+    </div>
 
         <!-- section begin -->
         <section id="section-fun-facts" class=" de_light pt40 pb40 ">
@@ -403,11 +421,14 @@
 
     <script>
         $('.Pass-id').click(function () {
-            document.getElementById("title").innerText =$(this).data('id').name;
+            document.getElementById("title").innerText =$(this).data('id').name + '  :  ' + $(this).data('id').type;
             document.getElementById("description").innerText =$(this).data('id').description;
-            document.getElementById("site").innerText ="SITE: "+$(this).data('id').site;
-            document.getElementById("facebook").innerText ="FB Page: "+$(this).data('id').facebook;
-            document.getElementById("phone").innerText ="Phone: "+$(this).data('id').phone;
+            document.getElementById("address").innerText = "ADDRESS: "+$(this).data('id').address;
+            document.getElementById("site").href = $(this).data('id').site;
+            document.getElementById("facebook").href = $(this).data('id').facebook;
+            document.getElementById("twitter").href = $(this).data('id').twitter;
+            document.getElementById("phone").innerText = " : " +$(this).data('id').phone;
+            document.getElementById("email").innerText = " : " +$(this).data('id').email;
             $.ajax({
                 url: '/initiative/{id}/image',
                 type: 'GET',
