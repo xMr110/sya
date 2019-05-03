@@ -299,6 +299,20 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-136337877-1"></script>
 @include('layouts.scripts')
 
 @yield('script')
+<!-- Global site tag (gtag.js) - Google Ads: 750236457 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-750236457"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-750236457');
+</script>
+
+<!-- Event snippet for Website view conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-750236457/uSGtCNelhp0BEKnm3uUC'});
+</script>
 </body>
 
 <script>
