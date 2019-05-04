@@ -40,12 +40,13 @@
     <!-- subheader close -->
 
     <!-- content begin -->
-    <div id="content" class="no-top no-bottom">
+    <div id="content" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}" class="no-top no-bottom">
         <section aria-label="section-services">
             <div class="container">
                 <div>
                     <iframe src="https://www.google.com/maps/d/embed?mid=1uBfTIsI_xBu7YoudPVLC90PeEbplZOyZ" width="100%" height="480"></iframe>
                 </div>
+                <br><br>
                 @if($initiatives->count())
                     <div class="ui link cards" >
                     @foreach($initiatives as $initiative)
@@ -96,11 +97,12 @@
 
 
 
-    <div id="MyModal"  class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div id="MyModal"  class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"  dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div style="border-bottom: 1px solid grey; padding: 20px; margin: 10px;" class="row">
-                    <h1 id="title"></h1>
+                <div style="border-bottom: 1px solid grey; padding: 20px; margin: 10px; display: flex;" class="row">
+                        <h1 id="title1"></h1>
+                        <h1 id="title2" style="margin-left: 25%; margin-right: 25%;"></h1>
                 </div>
                 <div  class="row" style="padding: 30px;">
                     <div id="image" class="col-md-4">
@@ -165,7 +167,8 @@
 @section('script')
     <script>
         $('.Pass-id').click(function () {
-            document.getElementById("title").innerText =$(this).data('id').name + '  :  ' + $(this).data('id').type;
+            document.getElementById("title1").innerText =$(this).data('id').name ;
+            document.getElementById("title2").innerText =$(this).data('id').type;
             document.getElementById("description").innerText =$(this).data('id').description;
             document.getElementById("address").innerText = "ADDRESS: "+$(this).data('id').address;
             document.getElementById("site").href = $(this).data('id').site;
