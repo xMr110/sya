@@ -41,7 +41,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="card" style="background-color: #fff3cd">
                                 <div class="el-card-item">
-                                    <div class="el-card-avatar el-overlay-1"> <img src="{{ url('/storage/' . $gpost->image_path) }}" alt="image" />
+                                    <div class="el-card-avatar el-overlay-1"> <img style="height: 180px;" src="{{ url('/storage/' . $gpost->image_path) }}" alt="image" />
                                         <div class="el-overlay">
                                             <ul class="el-info">
                                                 <li><a class="btn default btn-outline" href="{{action('GuestblogController@show',$gpost)}}"><i class="fa fa-search"></i></a></li>
