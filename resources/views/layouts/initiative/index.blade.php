@@ -4,7 +4,22 @@
     {{--semantic ui--}}
     <link href="/assets/frontend/semantic/card.css" rel="stylesheet" type="text/css">
 @endsection
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
 
+
+    <style type="text/css">
+        #mymap {
+            border:1px solid red;
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+
+
+</head>
 @section('content')
     <!-- subheader -->
     <section id="blog-subheader"
@@ -28,6 +43,9 @@
     <div id="content" class="no-top no-bottom">
         <section aria-label="section-services">
             <div class="container">
+                <div>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1uBfTIsI_xBu7YoudPVLC90PeEbplZOyZ" width="100%" height="480"></iframe>
+                </div>
                 @if($initiatives->count())
                     <div class="ui link cards" >
                     @foreach($initiatives as $initiative)
