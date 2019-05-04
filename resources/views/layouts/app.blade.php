@@ -179,7 +179,7 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-136337877-1"></script>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="margin: 0;">
                             @if(isset($certificates) AND count($certificates) > 0)
                             <p style="color: #000000;">@lang('footer.about_certificate')</p>
                             <div class="row" @if(config('app.locale') == "ar") style="text-align: right;" @endif>

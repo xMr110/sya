@@ -242,19 +242,19 @@
                 </div>
                     <div class="row" style="padding-left: 30px;">
                         <div class="col-md-1"></div>
-                        <div class="col-md-1" style=" font-size:xx-large; ">
+                        <div class="col-md-1 col-xs-4" style=" font-size:xx-large; ">
                             <a id = "facebook" class="fa fa-facebook" target="_blank" ></a>
                         </div>
-                        <div class="col-md-1" style="font-size:xx-large; ">
+                        <div class="col-md-1 col-xs-4" style="font-size:xx-large; ">
                             <a id = "twitter" class="fa fa-twitter" target="_blank" ></a>
                         </div>
-                        <div class="col-md-1" style="font-size:xx-large; ">
+                        <div class="col-md-1 col-xs-4" style="font-size:xx-large; ">
                             <a id = "site" class="fa fa-globe" target="_blank" ></a>
                         </div>
-                        <div class="col-md-3" style="font-size:large; display: inline">
+                        <div class="col-md-3 col-xs-12" style="font-size:large; display: inline">
                             <p class="fa fa-phone" id="phone"></p>
                         </div>
-                        <div class="col-md-4" style="font-size:large; display: inline">
+                        <div class="col-md-4 col-xs-12" style="font-size:large; display: inline">
                             <p class="fa fa-envelope" id="email"></p>
                         </div>
                         
