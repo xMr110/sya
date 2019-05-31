@@ -31,6 +31,7 @@
                         var mew5 = document.getElementById("me5");
                         var mew6 = document.getElementById("me6");
                         var mew7 = document.getElementById("me7");
+                        var mew8 = document.getElementById("me8");
 
                         if (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
 
@@ -43,6 +44,7 @@
                             mew5.setAttribute('style','color:rgba(50,50,50,.60)');
                             mew6.setAttribute('style','color:rgba(50,50,50,.60)');
                             mew7.setAttribute('style','color:rgba(50,50,50,.60)');
+                            mew8.setAttribute('style','color:rgba(228, 74, 194,.60)');
 
 
                         } else {
@@ -56,6 +58,8 @@
                             mew5.setAttribute('style','color:rgba(255,255,255,.95)');
                             mew6.setAttribute('style','color:rgba(255,255,255,.95)');
                             mew7.setAttribute('style','color:rgba(255,255,255,.95)');
+                            mew8.setAttribute('style','color:rgba(89, 220, 215, 0.95)');
+
 
                         }
                     }
@@ -79,6 +83,7 @@
                     <li><a id="me6" href="/programs"><b>@lang('navbar.programs')</b><span></span></a></li>
                     <li><a id="me2" href="/post"><b>@lang('navbar.blog')</b><span></span></a></li>
                     <li><a id="me3" href="{{action('GuestblogController@index')}}"><b>@lang('navbar.guest')</b><span></span></a></li>
+                    <li><a id="me8" href="/donate"><b>@lang('navbar.donate')</b><span></span></a></li>
                     @if(config('app.locale') == "ar")
                         <li><a style="color: #3f9aff" href="/lang/en"><b>@lang('navbar.english')</b><span></span></a></li>
                     @elseif(config('app.locale') == "en")
@@ -92,3 +97,12 @@
 
     </div>
 </div>
+
+<style type="text/css">
+    #me8 b{
+        color: rgba(89, 220, 215, 0.95);
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+</style>

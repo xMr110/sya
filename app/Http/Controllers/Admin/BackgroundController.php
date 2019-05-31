@@ -51,6 +51,16 @@ class BackgroundController extends Controller
 
             @unlink(storage_path('app/public/'. $settings->contactus_Background));
         }
+        if ($request->hasFile('initiative_Background')) {
+            $input['initiative_Background'] = $request->file('initiative_Background')->store('Backgrounds', 'public');
+
+            @unlink(storage_path('app/public/'. $settings->contactus_Background));
+        }
+        if ($request->hasFile('donate_Background')) {
+            $input['donate_Background'] = $request->file('donate_Background')->store('Backgrounds', 'public');
+
+            @unlink(storage_path('app/public/'. $settings->contactus_Background));
+        }
         if ($request->hasFile('Blog_subheader')) {
             $input['Blog_subheader'] = $request->file('Blog_subheader')->store('Backgrounds', 'public');
 

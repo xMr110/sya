@@ -133,6 +133,26 @@
                                                 @endif
                                             </div>
                                         </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group {{ $errors->has('donate_Background') ? 'has-danger' : '' }}">
+                                                <label class="control-label">صورة قسم التبرع</label>
+                                                <input type="file" name="donate_Background" class="form-control">
+                                                @if ($errors->has('donate_Background'))
+                                                    <small class="form-control-feedback">{{ $errors->first('donate_Background') }}</small>
+                                                @endif
+                                                @if(isset($settings->donate_Background) && $settings->donate_Background != "")
+                                                    <div class="col-md-12" style="margin: 10px">
+                                                        <div class="row el-element-overlay">
+                                                            <div class="el-card-item">
+                                                                <div class="el-card-avatar el-overlay-1">
+                                                                    <img src="{{ url('/storage/' . $settings->donate_Background) }}" alt="Donate" style="background-color: black; max-width: 150px" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>

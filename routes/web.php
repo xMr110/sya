@@ -43,6 +43,8 @@ Route::get('/apply' , 'ApplyController@index');
 
 Route::get('/about' , 'AboutusController@index');
 
+Route::get('/donate' , 'DonateController@index');
+
 Route::post('postContact', 'HomeController@postContact');
 
 //

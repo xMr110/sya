@@ -34,6 +34,8 @@ class Setting extends Model
             'Joinus_Background'     => '',
             'Ourteam_Background'    => '',
             'contactus_Background'  => '',
+            'initiative_Background' => '',
+            'donate_Background' => '',
             'Blog_subheader'                => '',
             'Guest_subheader'                => '',
             'About_subheader'                => '',
