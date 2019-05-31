@@ -74,6 +74,17 @@
                 </li>
                 <li><a  class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
                         <i
+                                class="mdi mdi-account-multiple"></i>
+                        <span class="hide-menu">
+                        شواغر التطوع
+                    </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="{{action('Admin\PositionController@index')}}">الكل </a></li>
+                        <li><a href="{{action('Admin\PositionController@create')}}">جديد</a></li>
+                    </ul>
+                </li>
+                <li><a  class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <i
                             class="mdi mdi-account-multiple"></i>
                         <span class="hide-menu">
                         المنشورات

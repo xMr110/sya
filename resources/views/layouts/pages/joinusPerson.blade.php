@@ -48,6 +48,22 @@
 
                     </div>
                 </div>
+
+                <div>
+                   @if(isset($positions) AND count($positions) > 0)
+                        <p class="lead"><strong style="color: #c11515;!important">@lang('JoinusPerson.positions_title')</strong></p>
+                        <ul>
+                        @foreach($positions as $position)
+                            <div class="col-md-2 col-xs-4" id="position" @if(config('app.locale') == "ar") style="float: right;" @endif>
+                                <a href="{{action('HomeController@position',$position)}}" target="_blank">
+                                <p style="font-weight: 600; font-size: 16px; color: #7f4eca">@lang($position->name)</p>
+                                <img style="max-width: 200px;max-height: 100px;" src="{{url('/storage/'.$position->image_path)}}" title="@lang($position->name)" label="@lang($position->name)">
+                                </a>
+                            </div>
+                        @endforeach
+                    </ul>
+                    @endif
+                </div>
             </div>
         </section>
     </div>

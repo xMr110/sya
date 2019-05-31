@@ -10,6 +10,7 @@ use App\Models\Gpost;
 use App\Models\Partner;
 use App\Models\Program;
 use App\Models\Certificate;
+use App\Models\Position;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -49,13 +50,25 @@ class HomeController extends Controller
         return view('layouts.certificates.show',compact('certificate'));
     }
 
+    public function positions()
+    {
+        $positions = Position::all();
+        return view('layouts.positions.index',compact('positions'));
+    }
+    public function position($id)
+    {
+        $position = Position::findOrFail($id);
+        return view('layouts.positions.show',compact('position'));
+    }
+
     public function support()
     {
         return view('layouts.pages.joinusCompany');
     }
     public function person()
-    {
-        return view('layouts.pages.joinusPerson');
+    {   
+        $positions = Position::all();
+        return view('layouts.pages.joinusPerson',compact('positions'));
 
     }
     public function postContact(Request $request)

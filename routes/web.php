@@ -35,6 +35,9 @@ Route::get('/programs/{program}','HomeController@program');
 Route::get('/certificates','HomeController@certificates');
 Route::get('/certificates/{certificate}','HomeController@certificate');
 
+Route::get('/positions','HomeController@positions');
+Route::get('/positions/{position}','HomeController@position');
+
 Route::get('/what_we_do' , 'WhatwedoController@index');
 Route::get('/support' , 'HomeController@support');
 Route::get('/person' , 'HomeController@person');

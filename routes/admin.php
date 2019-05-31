@@ -20,6 +20,8 @@ Route::post('program/featured/{program}', 'ProgramController@featured');
 Route::resource('certificate','CertificateController');
 Route::post('certificate/featured/{certificate}', 'CertificateController@featured');
 
+Route::resource('position','PositionController');
+Route::post('position/featured/{position}', 'PositionController@featured');
 
 Route::resource('post', 'PostController');
 Route::post('post/visible/{post}', 'PostController@visible');
