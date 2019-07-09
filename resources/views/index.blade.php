@@ -115,7 +115,7 @@
                                                             src="/assets/frontend/images/icons/2.png" style=" margin-left:15px; width: 50px;height: 50px; display: block;">@lang('homepage.JoinUs_Organisation')</span>
                                                 <div class="arrow"></div>
                                                 <div id="tab1" style="color: #fff;" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                   {{$company->body}}
+                                                   @if(isset($company->body)) {{$company->body}} @endif
                                                 </div>
                                                 <a href="{{$company->link}}"
                                                    class="btn btn-custom color-2" id="button">Join</a>
@@ -128,7 +128,7 @@
                                                             src="/assets/frontend/images/icons/1.png" style=" margin-left:15px; width: 50px;height: 50px; display: block;">@lang('homepage.JoinUs_Person')</span>
                                                 <div class="arrow"></div>
                                                 <div id="tab2" style="color: #fff;" dir="{{ config('app.locale') == 'ar' ? 'rtl' : '' }}" lang="{{ config('app.locale') == 'ar' ? 'ar' : '' }}">
-                                                  {{$person->body}}
+                                                    @if(isset($person->body)) {{$person->body}} @endif
                                                 </div>
                                                 <a href="{{$person->link}}"
                                                    class="btn btn-custom color-2">Join</a>
