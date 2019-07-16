@@ -30,7 +30,9 @@
 
 
 
-
+#AboutUs-subheader, #what-subheader, #apply-subheader, #write-subheader, #Company-subheader, #Person-subheader, #blog-subheader, #Guest-subheader{
+	height: 350px;
+}
 
 /* media query */
 @media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait){
