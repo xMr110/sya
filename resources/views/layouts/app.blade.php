@@ -294,7 +294,7 @@ src="https://www.googletagmanager.com/gtag/js?id=UA-136337877-1"></script>
          @if(isset($settings->linkedin))
             <a href="{{$settings->linkedin}}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
         @endif
-        <a href="https://www.youtube.com/channel/UCjfusGgFgy4SSoV_lAfZOrg" class="youtube" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a>
+        <a href="https://www.youtube.com/channel/UCAshESd9b7yTdiUYlTzvijA" class="youtube" target="_blank"><i class="fa fa-youtube" target="_blank"></i></a>
     </div>
 @include('layouts.scripts')
 
