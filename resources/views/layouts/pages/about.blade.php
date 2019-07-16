@@ -28,7 +28,7 @@
                 <div class="row">
                     <h1 >@lang('aboutus.about_title')</h1>
                     <br>
-                    <div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='100%' height='465px' src='http://www.youtube.com/embed/Map8Mli8oDs?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></div>
+                    <div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='100%' height='485px' src="https://www.youtube.com/embed/QAAE3-NBcvc" allowfullscreen='true' style='border:0;'></iframe></span></div>
                     <br>
                     <h4 class="lead"><strong>@lang('aboutus.about_title_q1')</strong></h4>
                     <p style="font-weight: 600; font-size: 16px;">@lang('aboutus.about_lorem_q1')</p>
