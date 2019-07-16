@@ -22,10 +22,10 @@
 </head>
 @section('content')
     <!-- subheader -->
-    <section id="blog-subheader"
+    <section id="blog-subheader" style="
              @if(isset($settings->Blog_subheader))
-             style="background: url({{'/storage/' .$settings->Blog_subheader}}) fixed;"
-             @endif
+             background: url({{'/storage/' .$settings->Blog_subheader}}) fixed;
+             @endif height: 350px;"
              class="subheader dark no-top no-bottom" data-stellar-background-ratio=".2">
         <div class="overlay-bg t80">
             <div class="container">

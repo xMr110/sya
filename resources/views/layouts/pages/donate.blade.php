@@ -4,10 +4,10 @@
 @section('content')
 
     <!-- subheader -->
-    <section id="Person-subheader"
+    <section id="Donate_subheader" style= "
              @if(isset($settings->Donate_subheader))
-             style="background: url({{'/storage/' .$settings->Donate_subheader}}) fixed;"
-             @endif
+             background: url({{'/storage/' .$settings->Donate_subheader}}) fixed;
+             @endif height: 350px;"
              class="subheader dark no-top no-bottom"  data-stellar-background-ratio=".2">
         <div class="overlay-bg t70">
             <div class="container">
