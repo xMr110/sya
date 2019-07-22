@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class BlogController extends Controller
 {
     public function index()
     {
-
-        $posts = Post::latest()->where('visible', 1)->paginate(3);
+        $settings = $settings = Cache::get('site_settings');
+        $posts = Post::latest()->where('visible', 1)->paginate($settings->paginationLimit ?? 9);
 
         return view('layouts.blog.index',compact('posts'));
     }

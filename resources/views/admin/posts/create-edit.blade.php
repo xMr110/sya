@@ -35,15 +35,15 @@
                                 </h3>
                             </div>
                             @foreach(Localization::getSupportedLocales() as $key => $locale)
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="title_{{$key}}">العنوان {{$locale->native()}}</label>
-                                    <input type="text" class="form-control form-control-line"
-                                           name="title_{{$key}}"
-                                           placeholder="Title for {{$locale->native()}}.. "
-                                           value="{{ isset($post) ? isset($post->translate($key)->title) ? $post->translate($key)->title : old("title_". $key) ?? '' : old("title_". $key) ?? '' }} "/>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="title_{{$key}}">العنوان {{$locale->native()}}</label>
+                                        <input type="text" class="form-control form-control-line"
+                                               name="title_{{$key}}"
+                                               placeholder="Title for {{$locale->native()}}.. "
+                                               value="{{ isset($post) ? isset($post->translate($key)->title) ? $post->translate($key)->title : old("title_". $key) ?? '' : old("title_". $key) ?? '' }} "/>
+                                    </div>
                                 </div>
-                            </div>
                             @endforeach
 
                             <div class="col-md-12">
@@ -80,6 +80,7 @@
                                         </h3>
                                     </label>
                                     <input type="file" name="image_path" class="form-control form-control-line">
+                                    <div class="help-block">طول 380 بكسل وعرض 570 بكسل</div>
                                 </div>
                             </div>
 

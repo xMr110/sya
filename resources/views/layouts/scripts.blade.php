@@ -25,6 +25,10 @@
 <script src="/assets/frontend/js/designesia.js"></script>
 <script src="/assets/frontend/demo/demo.js"></script>
 
+<script>
+    new WOW().init();
+</script>
+
 
 
 
